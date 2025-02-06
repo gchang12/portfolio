@@ -1,0 +1,18 @@
+/*
+Instructions
+
+Continue work on your portfolio project directory adding CSS for this assignment.
+
+    Create a directory called 'styles' and within it, stylesheet.css. In this stylesheet, write some styling for your portfolio site. This file must have at least 50 lines of code. Use your design skills or just experiment. This assignment is about using CSS properly, not design.
+    Use the CSS validator to check the quality of your code: https://jigsaw.w3.org/css-validator/ 
+
+Links to an external site.
+Include a link to the stylesheet in the head section of each of the html pages. This would also be a good opportunity to add more content to these HTML pages.
+Use git to commit your work as you go. Push your work up to your “portfolio” repository on GitHub main branch, and submit a link to the GitHub repo and your GitHub pages site for the assignment. I will view the pages via your personal GitHub Pages URL and expect everything to be functional (no broken images or links, etc). Refer to Lesson 00 and 01 if you need a refresher on git & GitHub.
+ 
+ */
+
+body {
+  background-color: black;
+  color: white;
+}
