@@ -1,0 +1,4 @@
+images/*
+!images/site-icon.jpg
+!images/background-img.jpg
+*.sw[a-z]
