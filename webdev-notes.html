@@ -33,113 +33,176 @@
   </nav>
 
   <main>
-    <section>
-      <h1>Notes</h1>
-      <section>
-        <h2>General</h2>
-        <article>
-          <dl>
-            <dt>Caching</dt>
-            <dd>First: How web-surfing works. When accessing a webpage, your browser must send in a request for what to download and stuff. The server then decides what to send to your browser. Assuming that the requested content is okay to send, the server, the master computer that responds to HTTP requests, sends that content your way. To economize on subsequent requests, your browser will save some of the requested content so that it doesn't need to redownload resources each and every time you ping the server for something.</dd>
-          </dl>
-        </article>
-      </section>
-      <section>
-        <h2>HTML</h2>
-        <article>
-          <dl>
-            <dt>Images</dt>
-            <dd>Are specified via <code>&lt;img&gt;</code> void tag</dd>
-            <ul>
-              <li>Does not require closing tag.</li>
-              <li><code>src</code> attribute must be a path to a URL or an internal file</li>
-              <li>Size attributes protect against <a href="https://developer.mozilla.org/en-US/docs/Glossary/Jank" title="Jank refers to sluggishness in a user interface, usually caused by executing long tasks on the main thread, blocking rendering, or expending too much processor power on background processes.">jank</a>.</li>
-              <li><code>alt</code> is required for screen-readers, and if the image is not found; short for 'alternative text'. Helps also with SEO and indexing (i.e. listing of webpage in search results)</li>
-            </ul>
-            <li>Common file formats:</li>
-            <ul>
-              <li>General: jpg, gif, png</li>
-              <li>Simple: gif, png</li>
-              <li>Photos: jpg</li>
-            </ul>
-            <dd>Get images from open source resources, such as <a href="https://search.creativecommons.org/">CreativeCommons</a></dd>
-            <dd>Some photos require extra stipulations to be used in a webpage.</dd>
-          </dl>
-        </article>
-        <article>
-          <dl>
-            <dt>Semantic Elements</dt>
-            <dd>Describe meaning of content to machines and humans.</dd>
-            <dd>Say something about type of content they contain</dd>
-            <dd>Allow search engines to parse content better.</dd>
-            <dd>Makes writing HTML easier.</dd>
-            <dd>Are relatively new (some existed prior to HTML5).</dd>
-            <dd>Not semantic: <code>&lt;div&gt;</code>, <code>&lt;span</code> are for styling purposes.</dd>
-          </dl>
-          <p>A goal of HTML5 is to segregate semantics and styling.</p>
-          <dl>
-            <dt>HTML</dt>
-            <dd>Meaning</dd>
-            <dt>CSS</dt>
-            <dd>Appearance</dd>
-          </dl>
-          <p>A comprehensive list of HTML elements can be found at <a href="https://www.w3schools.com/tags/default.asp">W3Schools</a></p>
-        </article>
-        <article>
-          <h3>General</h3>
-        </article>
-      </section>
-      <section>
-        <h2>CSS</h2>
-        <article>
-        </article>
-          <!-- IDs are for extremely specific stylres. Applied to one page on the document. Not ideal for CSS; should exist for semantic purposes exclusively. -->
-          <!--
-          Basics of selectors
-          html element: name of element
-          class name: name preceded by period
-          id name: name preceded by pound-sign
-          -->
-          <!--
-          Pseudo classes
-          - select based on state (e.g. hover)
-          - select based on attribute (e.g. https://)
-          Links should always be descriptive of content, not the fact that they're links.
-          - OK: More information about whales here.
-          - Not OK: Click here.
-          -->
-          <!--
-          Hexadecimal
-          - colors of the form: #RRGGBB, where [RGB] is a digit from 0-15
-          - 0 = 0, F = 15
-          - Check out W3 hex-calculator
-          -->
-          <!--
-          Color systems:
-          - HSL (Hue, Saturation, and Lightness):
-            - supported in most modern browsers
-            - hue represented by a color wheel from 0 to 360
-            - saturation and lightness represented by percentages
-          A fourth value can be appended to either HSL or RGB: A (alpha  / opacity)
-          - determines how clear some color is.
-          -->
-          <!--
-          Borders:
-          - size unit: percentage
-            - i.e. of the parent element's size
-          - size unit: REM
-            - i.e. size of root element's font size; relative unit of measurement
-            - on laptop: 16px; on mobile: 10px; in general, same size as base font size
-            - using relative units of measurement is a key part of responsive design
-          -->
-          <!--
-          Pseudo-selectors
-          - style content based on its relation to DOM and external factors also
-          - uses: when a user hovers over something; link's been visited;
-          - least specific styles are defined first
-          -->
+    <h1>Notes</h1>
 
+    <section id="general">
+      <h2>General</h2>
+      <article>
+        <h3>Caching</h3>
+        <p>First: How web-surfing works. When accessing a webpage, your browser must send in a request for what to download and stuff. The server then decides what to send to your browser. Assuming that the requested content is okay to send, the server, the master computer that responds to HTTP requests, sends that content your way. To economize on subsequent requests, your browser will save some of the requested content so that it doesn't need to redownload resources each and every time you ping the server for something.</p>
+      </article>
+      <article>
+        <h3>Links</h3>
+        <ul>
+          <li>Should always be descriptive of content, not the fact that they're links.</li>
+          <li>OK: More information about whales here in the <a href="#general">#general</a> section of this page.</li>
+          <li>Not OK: Click <a href="#general">here</a>.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Selecting via CSS</h3>
+        <ul>
+          <li>Least specific styles should be defined first to leverage the 'order' feature in resolving conflicts</li>
+          <li>Should <em>not</em> use ID-selectors over often; bad practice</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Responsive Design</h3>
+        <p>When specifying lengths, use of relative units of measurement are encouraged (e.g. <code>em</code>, <code>rem</code>)</p>
+      </article>
     </section>
+
+    <section>
+      <h2>HTML</h2>
+      <article>
+        <h3>Images</h3>
+        <p>Are specified via <code>&lt;img&gt;</code> void tag</p>
+        <ul>
+          <li>Does not require closing tag.</li>
+          <li><code>src</code> attribute must be a path to a URL or an internal file</li>
+          <li>Size attributes protect against <a href="https://developer.mozilla.org/en-US/docs/Glossary/Jank" title="Jank refers to sluggishness in a user interface, usually caused by executing long tasks on the main thread, blocking rendering, or expending too much processor power on background processes.">jank</a>.</li>
+          <li><code>alt</code> is required for screen-readers, and if the image is not found; short for 'alternative text'. Helps also with SEO and indexing (i.e. listing of webpage in search results)</li>
+        </ul>
+        <p>Common file formats:</p>
+        <ul>
+          <li>General: jpg, gif, png</li>
+          <li>Simple: gif, png</li>
+          <li>Photos: jpg</li>
+        </ul>
+        <p>Get images from open source resources, such as <a href="https://search.creativecommons.org/">CreativeCommons</a></p>
+        <p>Some photos require extra stipulations to be used in a webpage.</p>
+      </article>
+      <article>
+        <h3>Semantic Elements</h3>
+        <ul>
+          <li>Describe meaning of content to machines and humans.</li>
+          <li>Say something about type of content they contain</li>
+          <li>Allow search engines to parse content better.</li>
+          <li>Makes writing HTML easier.</li>
+          <li>Are relatively new (some existed prior to HTML5).</li>
+          <li>Not semantic: <code>&lt;div&gt;</code>, <code>&lt;span</code> are for styling purposes.</li>
+        </ul>
+        <p>A goal of HTML5 is to segregate semantics and styling.</p>
+        <dl>
+          <dt>HTML</dt>
+          <dd>Meaning</dd>
+          <dt>CSS</dt>
+          <dd>Appearance</dd>
+        </dl>
+        <p>A comprehensive list of HTML elements can be found at <a href="https://www.w3schools.com/tags/default.asp">W3Schools</a></p>
+      </article>
+      <article>
+        <h3>General</h3>
+      </article>
+    </section>
+
+    <section>
+      <h2>CSS</h2>
+      <article>
+        <h3>Selectors</h3>
+        At an atomic level, one can select one of:
+        <ul>
+          <li>An element: <code>html { ... }</code></li>
+          <li>A class: <code>.myclass { ... }</code></li>
+          <li>An ID: <code>#my-id { ... }</code></li>
+        </ul>
+      </article>
+      <article>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></h3>
+        <ul>
+          <li>One can select an element based on state.</li>
+          <li>Example: <code>a:hover {...}</code></li>
+        </ul>
+      </article>
+      <article>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elements</a></h3>
+        <ul>
+          <li>Also known as "pseudo-selectors"</li>
+          <li>style content based on its relation to DOM and external factors also</li>
+          <li>uses: when a user hovers over something; link's been visited;</li>
+          <li>One can select a specific part of an element.</li>
+          <li>Example: <code>p::first-line {...}</code></li>
+        </ul>
+      </article>
+      <article>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a></h3>
+        <ul>
+          <li>One can select an element given that a specified attribute is set, possibly to a specific value.</li>
+          <li>Example: <code>a[href] {...}</code> selects anchor tags with set <code>href</code> attributes.</li>
+          <li>Example: <code>a[href="google.com"] {...}</code> selects anchor tags with <code>href</code> attributes set to 'google.com'.</li>
+        </ul>
+      </article>
+      <section>
+        <h2>Colors</h2>
+        <article>
+          <h3>Hexadecimal</h3>
+          <ul>
+            <li>Numbers of the form, <code>#[0-9A-F]{6}</code>, where <code>A = 10, B = 11, etc.</code></li>
+            <li>Can represent colors.</li>
+            <li>Find the hex for a color via <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp">this W3 resource</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3><abbr title="Hue, Saturation, Lightness">HSL</abbr></h3>
+          <ul>
+            <li>Is supported in most browsers.</li>
+            <li>Hue is represented by a color wheel (0..360).</li>
+            <li>Saturation and lightness are represented by percentages.</li>
+          </ul>
+        </article>
+        <article>
+          <h3><abbr title="Red, Green, Blue">RGB</abbr></h3>
+          <ul>
+            <li>A model in which the addition of colors are additive.</li>
+            <li>Each value for red, green, and blue is represented by an integer from 0 to 255.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Alpha</h3>
+          <ul>
+            <li>Represents opacity (transparency) of a color.</li>
+            <li>Specified as the fourth argument in the two color models above.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Support for Colors in CSS</h3>
+          <ul>
+            <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb">rgb</a> function</li>
+            <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl">hsl</a> function</li>
+          </ul>
+        </article>
+      </section>
+      <article>
+        <h2>Borders</h2>
+        <ul>
+          <li>Accessible via <code>&lt;border&gt;</code> property. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">(MDN entry)</a></li>
+          <li>Syntax: <code>border: &lt;width&gt; &lt;style&gt; &lt;color&gt;</code></li>
+        </ul>
+      </article>
+      <section>
+        <h2>Units of Measurement</h2>
+        <article>
+          <h3>Length</h3>
+          <ul>
+            <li>Can be specified via percentage (i.e. of parent element's dimension)</li>
+            <li>Can be specified in terms of <code>rem</code>, the size of the root element's font.</li>
+            <li>Can be specified in terms of <code>em</code>, the size of the immediate parent element's font.</li>
+            <li>Can be specified in terms of absolute units (e.g. px, mm, pt).</li>
+          </ul>
+        </article>
+      </section>
+    </section>
+
   </main>
 
   <!-- TODO: To be visible site-wide; update as necessary for consistency -->
