@@ -34,7 +34,7 @@ nav li:hover {
   background-color: orange;
 }
 main {
-  background-color: blue;
+  background-color: purple;
   /* display: inline-block; */
 }
 .reminders:hover {
