@@ -3,7 +3,7 @@
 <head>
   <!-- For boilerplate text: https://lipsum.com/ -->
   <meta charset="UTF-8" >
-  <title>About Me</title>
+  <title>Web Development Notes</title>
   <link rel="stylesheet" type="text/css" href="./styles/stylesheet.css" >
 </head>
 <body>
@@ -28,6 +28,7 @@
     <ul>
       <li><a href="./about-me.html">About Me</a></li>
       <li><a href="./webdev-notes.html">Web-Dev Notes</a></li>
+      <li><a href="./webdev-reference.html">Web-Dev Element Reference</a></li>
     </ul>
   </nav>
 
@@ -37,19 +38,164 @@
       <section>
         <h2>General</h2>
         <article>
-          <h3>Caching</h3>
-          <p>First: How web-surfing works. When accessing a webpage, your browser must send in a request for what to download and stuff. The server then decides what to send to your browser. Assuming that the requested content is okay to send, the server, the master computer that responds to HTTP requests, sends that content your way. To economize on subsequent requests, your browser will save some of the requested content so that it doesn't need to redownload resources each and every time you ping the server for something.</p>
+          <dl>
+            <dt>Caching</dt>
+            <dd>First: How web-surfing works. When accessing a webpage, your browser must send in a request for what to download and stuff. The server then decides what to send to your browser. Assuming that the requested content is okay to send, the server, the master computer that responds to HTTP requests, sends that content your way. To economize on subsequent requests, your browser will save some of the requested content so that it doesn't need to redownload resources each and every time you ping the server for something.</dd>
+          </dl>
         </article>
       </section>
       <section>
         <h2>HTML</h2>
         <article>
+          <dl>
+            <dt>Images</dt>
+            <dd>Are specified via <code>&lt;img&gt;</code> void tag</dd>
+            <ul>
+              <li>Does not require closing tag.</li>
+              <li><code>src</code> attribute must be a path to a URL or an internal file</li>
+              <li>Size attributes protect against <a href="https://developer.mozilla.org/en-US/docs/Glossary/Jank" title="Jank refers to sluggishness in a user interface, usually caused by executing long tasks on the main thread, blocking rendering, or expending too much processor power on background processes.">jank</a>.</li>
+              <li><code>alt</code> is required for screen-readers, and if the image is not found; short for 'alternative text'. Helps also with SEO and indexing (i.e. listing of webpage in search results)</li>
+            </ul>
+            <li>Common file formats:</li>
+            <ul>
+              <li>General: jpg, gif, png</li>
+              <li>Simple: gif, png</li>
+              <li>Photos: jpg</li>
+            </ul>
+            <dd>Get images from open source resources, such as <a href="https://search.creativecommons.org/">CreativeCommons</a></dd>
+            <dd>Some photos require extra stipulations to be used in a webpage.</dd>
+          </dl>
+        </article>
+        <article>
+          <dl>
+            <dt>Semantic Elements</dt>
+            <dd>Describe meaning of content to machines and humans.</dd>
+            <dd>Say something about type of content they contain</dd>
+            <dd>Allow search engines to parse content better.</dd>
+            <dd>Makes writing HTML easier.</dd>
+            <dd>Are relatively new (some existed prior to HTML5).</dd>
+            <dd>Not semantic: <code>&lt;div&gt;</code>, <code>&lt;span</code> are for styling purposes.</dd>
+          </dl>
+          <p>A goal of HTML5 is to segregate semantics and styling.</p>
+          <dl>
+            <dt>HTML</dt>
+            <dd>Meaning</dd>
+            <dt>CSS</dt>
+            <dd>Appearance</dd>
+          </dl>
+          <p>A comprehensive list of HTML elements can be found at <a href="https://www.w3schools.com/tags/default.asp">W3Schools</a></p>
+        </article>
+        <article>
           <h3>General</h3>
         </article>
         <article>
           <h3>Element Referendum</h3>
+          <dt>&lt;html&gt;</dt>
+          <dd>This identifies what sort of document the file is.</dd>
+          <dd>One should also set the <code>lang</code> attribute for SEO purposes.</dd>
+          <dt>&lt;head&gt;</dt>
+          <dd>Nothing in here shows up rendered in the webpage.</dd>
+          <dd>Typically contains &lt;meta&gt;, &lt;title&gt;, &lt;link&gt;, and &lt;script &gt;with &lt;defer&gt; set.</dd>
+          <dt>&lt;meta&gt;</dt>
+          <dd>Declare character set here.</dd>
+          <dt>&lt;title&gt;</dt>
+          <dd>The title of the window of the webpage goes here.</dd>
+          <dt>&lt;link&gt;</dt>
+          <dd>Contains reference to CSS style-sheet among other documents.</dd>
+          <dt>&lt;script&gt;</dt>
+          <dd>References Javascript file; user can enclose code inside here also.</dd>
+          <dt>&lt;body&gt;</dt>
+          <dd>Contains all rendered content.</dd>
+          <dt>&lt;h1&gt;</dt>
+          <dd>Contains the rendered title of the webpage.</dd>
+          <dt>&lt;h[2-6]&gt;</dt>
+          <dd>Contains the title of some section lesser than the element that encloses &lt;h1&gt;</dd>
+          <dt>&lt;p&gt;</dt>
+          <dd>Contains paragraphs of text.</dd>
+          <dt>&lt;em&gt;</dt>
+          <dd>Contains text meant to be emphasized.</dd>
+          <dd>TODO: Explain how it differs from &lt;strong&gt;</dd>
+          <dd>
+            Examples
+            <ul>
+            </ul>
+          </dd>
+          <dt>&lt;strong&gt;</dt>
+          <dd>Contains important text.</dd>
+          <dd>TODO: Explain how it differs from &lt;em&gt;</dd>
+          <dd>
+            Examples
+            <ul>
+            </ul>
+          </dd>
+          <dt>&lt;blockquote&gt;</dt>
+          <dd>TODO</dd>
+          <dt>&lt;header&gt;</dt>
+          <dd>TODO</dd>
+          <dt>&lt;nav&gt;</dt>
+          <dd>TODO</dd>
+          <dt>&lt;section&gt;</dt>
+          <dd>TODO</dd>
+          <dt>&lt;article&gt;</dt>
+          <dd>TODO</dd>
+          <dt>&lt;footer&gt;</dt>
+          <dd>TODO</dd>
+          <dt>&lt;aside&gt;</dt>
+          <dd>TODO</dd>
+          <dt>&lt;main&gt;</dt>
+          <dd>TODO</dd>
         </article>
       </section>
+      <section>
+        <h2>CSS</h2>
+        <article>
+        </article>
+          <!-- IDs are for extremely specific stylres. Applied to one page on the document. Not ideal for CSS; should exist for semantic purposes exclusively. -->
+          <!--
+          Basics of selectors
+          html element: name of element
+          class name: name preceded by period
+          id name: name preceded by pound-sign
+          -->
+          <!--
+          Pseudo classes
+          - select based on state (e.g. hover)
+          - select based on attribute (e.g. https://)
+          Links should always be descriptive of content, not the fact that they're links.
+          - OK: More information about whales here.
+          - Not OK: Click here.
+          -->
+          <!--
+          Hexadecimal
+          - colors of the form: #RRGGBB, where [RGB] is a digit from 0-15
+          - 0 = 0, F = 15
+          - Check out W3 hex-calculator
+          -->
+          <!--
+          Color systems:
+          - HSL (Hue, Saturation, and Lightness):
+            - supported in most modern browsers
+            - hue represented by a color wheel from 0 to 360
+            - saturation and lightness represented by percentages
+          A fourth value can be appended to either HSL or RGB: A (alpha  / opacity)
+          - determines how clear some color is.
+          -->
+          <!--
+          Borders:
+          - size unit: percentage
+            - i.e. of the parent element's size
+          - size unit: REM
+            - i.e. size of root element's font size; relative unit of measurement
+            - on laptop: 16px; on mobile: 10px; in general, same size as base font size
+            - using relative units of measurement is a key part of responsive design
+          -->
+          <!--
+          Pseudo-selectors
+          - style content based on its relation to DOM and external factors also
+          - uses: when a user hovers over something; link's been visited;
+          - least specific styles are defined first
+          -->
+
     </section>
   </main>
 
