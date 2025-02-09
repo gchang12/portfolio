@@ -41,25 +41,17 @@
         <h3>Caching</h3>
         <p>First: How web-surfing works. When accessing a webpage, your browser must send in a request for what to download and stuff. The server then decides what to send to your browser. Assuming that the requested content is okay to send, the server, the master computer that responds to HTTP requests, sends that content your way. To economize on subsequent requests, your browser will save some of the requested content so that it doesn't need to redownload resources each and every time you ping the server for something.</p>
       </article>
-      <article>
-        <h3>Links</h3>
-        <ul>
-          <li>Should always be descriptive of content, not the fact that they're links.</li>
-          <li>OK: More information about whales here in the <a href="#general">#general</a> section of this page.</li>
-          <li>Not OK: Click <a href="#general">here</a>.</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Selecting via CSS</h3>
-        <ul>
-          <li>Least specific styles should be defined first to leverage the 'order' feature in resolving conflicts</li>
-          <li>Should <em>not</em> use ID-selectors over often; bad practice</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Responsive Design</h3>
-        <p>When specifying lengths, use of relative units of measurement are encouraged (e.g. <code>em</code>, <code>rem</code>)</p>
-      </article>
+      <dl>
+        <dt>Links</dt>
+        <dd>Should always be descriptive of content, not the fact that they're links.</dd>
+        <dd>OK: More information about whales here in the <a href="#general">#general</a> section of this page.</dd>
+        <dd>Not OK: Click <a href="#general">here</a>.</dd>
+        <dt>Selecting via CSS</dt>
+        <dd>Least specific styles should be defined first to leverage the 'order' feature in resolving conflicts</dd>
+        <dd>Should <em>not</em> use ID-selectors over often; bad practice</dd>
+      <dt>Responsive Design</dt>
+      <dd>When specifying lengths, use of relative units of measurement are encouraged (e.g. <code>em</code>, <code>rem</code>)</dd>
+      </dl>
     </section>
 
     <section>
@@ -67,12 +59,13 @@
       <article>
         <h3>Images</h3>
         <p>Are specified via <code>&lt;img&gt;</code> void tag</p>
-        <ul>
-          <li>Does not require closing tag.</li>
-          <li><code>src</code> attribute must be a path to a URL or an internal file</li>
-          <li>Size attributes protect against <a href="https://developer.mozilla.org/en-US/docs/Glossary/Jank" title="Jank refers to sluggishness in a user interface, usually caused by executing long tasks on the main thread, blocking rendering, or expending too much processor power on background processes.">jank</a>.</li>
-          <li><code>alt</code> is required for screen-readers, and if the image is not found; short for 'alternative text'. Helps also with SEO and indexing (i.e. listing of webpage in search results)</li>
-        </ul>
+        <dl>
+          <dt><code>&lt;img&gt;</code></dt>
+          <dd>Does not require closing tag.</dd>
+          <dd><code>src</code> attribute must be a path to a URL or an internal file</dd>
+          <dd>Size attributes protect against <a href="https://developer.mozilla.org/en-US/docs/Glossary/Jank" title="Jank refers to sluggishness in a user interface, usually caused by executing long tasks on the main thread, blocking rendering, or expending too much processor power on background processes.">jank</a>.</dd>
+          <dd><code>alt</code> is required for screen-readers, and if the image is not found; short for 'alternative text'. Helps also with SEO and indexing (i.e. listing of webpage in search results)</dd>
+        </dl>
         <p>Common file formats:</p>
         <ul>
           <li>General: jpg, gif, png</li>
@@ -84,14 +77,15 @@
       </article>
       <article>
         <h3>Semantic Elements</h3>
-        <ul>
-          <li>Describe meaning of content to machines and humans.</li>
-          <li>Say something about type of content they contain</li>
-          <li>Allow search engines to parse content better.</li>
-          <li>Makes writing HTML easier.</li>
-          <li>Are relatively new (some existed prior to HTML5).</li>
-          <li>Not semantic: <code>&lt;div&gt;</code>, <code>&lt;span</code> are for styling purposes.</li>
-        </ul>
+        <dl>
+          <dt>Semantic Elements</dt>
+          <dd>Describe meaning of content to machines and humans.</dd>
+          <dd>Say something about type of content they contain</dd>
+          <dd>Allow search engines to parse content better.</dd>
+          <dd>Makes writing HTML easier.</dd>
+          <dd>Are relatively new (some existed prior to HTML5).</dd>
+          <dd>Not semantic: <code>&lt;div&gt;</code>, <code>&lt;span</code> are for styling purposes.</dd>
+        </dl>
         <p>A goal of HTML5 is to segregate semantics and styling.</p>
         <dl>
           <dt>HTML</dt>
@@ -117,90 +111,59 @@
           <li>An ID: <code>#my-id { ... }</code></li>
         </ul>
       </article>
-      <article>
-        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></h3>
-        <ul>
-          <li>One can select an element based on state.</li>
-          <li>Example: <code>a:hover {...}</code></li>
-        </ul>
-      </article>
-      <article>
-        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elements</a></h3>
-        <ul>
-          <li>Also known as "pseudo-selectors"</li>
-          <li>style content based on its relation to DOM and external factors also</li>
-          <li>uses: when a user hovers over something; link's been visited;</li>
-          <li>One can select a specific part of an element.</li>
-          <li>Example: <code>p::first-line {...}</code></li>
-        </ul>
-      </article>
-      <article>
-        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a></h3>
-        <ul>
-          <li>One can select an element given that a specified attribute is set, possibly to a specific value.</li>
-          <li>Example: <code>a[href] {...}</code> selects anchor tags with set <code>href</code> attributes.</li>
-          <li>Example: <code>a[href="google.com"] {...}</code> selects anchor tags with <code>href</code> attributes set to 'google.com'.</li>
-        </ul>
-      </article>
+      <dl>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></dt>
+        <dd>One can select an element based on state.</dd>
+        <dd>Example: <code>a:hover {...}</code></dd>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elements</a></dt>
+        <dt>Pseudo-elements</dt>
+        <dd>Also known as "pseudo-selectors"</dd>
+        <dd>style content based on its relation to DOM and external factors also</dd>
+        <dd>uses: when a user hovers over something; link's been visited;</dd>
+        <dd>One can select a specific part of an element.</dd>
+        <dd>Example: <code>p::first-line {...}</code></dd>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a></dt>
+        <dd>One can select an element given that a specified attribute is set, possibly to a specific value.</dd>
+        <dd>Example: <code>a[href] {...}</code> selects anchor tags with set <code>href</code> attributes.</dd>
+        <dd>Example: <code>a[href="google.com"] {...}</code> selects anchor tags with <code>href</code> attributes set to 'google.com'.</dd>
+      </dl>
       <section>
         <h2>Colors</h2>
-        <article>
-          <h3>Hexadecimal</h3>
-          <ul>
-            <li>Numbers of the form, <code>#[0-9A-F]{6}</code>, where <code>A = 10, B = 11, etc.</code></li>
-            <li>Can represent colors.</li>
-            <li>Find the hex for a color via <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp">this W3 resource</a></li>
-          </ul>
-        </article>
-        <article>
-          <h3><abbr title="Hue, Saturation, Lightness">HSL</abbr></h3>
-          <ul>
-            <li>Is supported in most browsers.</li>
-            <li>Hue is represented by a color wheel (0..360).</li>
-            <li>Saturation and lightness are represented by percentages.</li>
-          </ul>
-        </article>
-        <article>
-          <h3><abbr title="Red, Green, Blue">RGB</abbr></h3>
-          <ul>
-            <li>A model in which the addition of colors are additive.</li>
-            <li>Each value for red, green, and blue is represented by an integer from 0 to 255.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Alpha</h3>
-          <ul>
-            <li>Represents opacity (transparency) of a color.</li>
-            <li>Specified as the fourth argument in the two color models above.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Support for Colors in CSS</h3>
-          <ul>
-            <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb">rgb</a> function</li>
-            <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl">hsl</a> function</li>
-          </ul>
-        </article>
+        <dl>
+          <dt>Hexadecimal</dt>
+          <dd>Numbers of the form, <code>#[0-9A-F]{6}</code>, where <code>A = 10, B = 11, etc.</code></dd>
+          <dd>Can represent colors.</dd>
+          <dd>Find the hex for a color via <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp">this W3 resource</a></dd>
+          <dt><abbr title="Hue, Saturation, Lightness">HSL</abbr></dt>
+          <dd>Is supported in most browsers.</dd>
+          <dd>Hue is represented by a color wheel (0..360).</dd>
+          <dd>Saturation and lightness are represented by percentages.</dd>
+          <dt><abbr title="Red, Green, Blue">RGB</abbr></dt>
+          <dd>A model in which the addition of colors are additive.</dd>
+          <dd>Each value for red, green, and blue is represented by an integer from 0 to 255.</dd>
+          <dt>Alpha</dt>
+          <dd>Represents opacity (transparency) of a color.</dd>
+          <dd>Specified as the fourth argument in the two color models above.</dd>
+          <dt>Support for Colors in CSS</dt>
+          <dd>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb">rgb</a> function</dd>
+          <dd>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl">hsl</a> function</dd>
+        </dl>
       </section>
+      <dl>
+        <dt>Borders</dt>
+        <dd>Accessible via <code>&lt;border&gt;</code> property. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">(MDN entry)</a></dd>
+        <dd>Syntax: <code>border: &lt;width&gt; &lt;style&gt; &lt;color&gt;</code></dd>
+      </dl>
       <article>
-        <h2>Borders</h2>
-        <ul>
-          <li>Accessible via <code>&lt;border&gt;</code> property. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">(MDN entry)</a></li>
-          <li>Syntax: <code>border: &lt;width&gt; &lt;style&gt; &lt;color&gt;</code></li>
-        </ul>
+        <h3>Units of Measurement</h3>
+        <dl>
+          <dt>Length</dt>
+          <dd>Can be specified via percentage (i.e. of parent element's dimension)</dd>
+          <dd>Can be specified in terms of <code>rem</code>, the size of the root element's font.</dd>
+          <dd>Can be specified in terms of <code>em</code>, the size of the immediate parent element's font.</dd>
+          <dd>Can be specified in terms of absolute units (e.g. px, mm, pt).</dd>
+        </dl>
       </article>
-      <section>
-        <h2>Units of Measurement</h2>
-        <article>
-          <h3>Length</h3>
-          <ul>
-            <li>Can be specified via percentage (i.e. of parent element's dimension)</li>
-            <li>Can be specified in terms of <code>rem</code>, the size of the root element's font.</li>
-            <li>Can be specified in terms of <code>em</code>, the size of the immediate parent element's font.</li>
-            <li>Can be specified in terms of absolute units (e.g. px, mm, pt).</li>
-          </ul>
-        </article>
-      </section>
     </section>
 
   </main>

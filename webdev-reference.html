@@ -3,7 +3,7 @@
 <head>
   <!-- For boilerplate text: https://lipsum.com/ -->
   <meta charset="UTF-8" >
-  <title>About Me</title>
+  <title>Reference</title>
   <link rel="stylesheet" type="text/css" href="./styles/stylesheet.css" >
 </head>
 <body>
@@ -17,7 +17,7 @@
         <img
           src="./images/site-icon.jpg"
           alt="A periwinkle" 
-          height="200px" >
+          height="200" >
       </a>
     </div><div id="background" class="header-content">
       <!-- https://openverse.org/image/681de21e-ed24-4f77-bbb3-a3cfbff80b24?q=fjord&p=16 -->
@@ -33,68 +33,96 @@
   </nav>
 
   <main>
-    <section>
-      <article>
-        <h3>HTML</h3>
-        <dt>&lt;html&gt;</dt>
+    <h1>List of Elements</h1>
+
+    <article>
+      <!-- TODO: Add MDN links here. -->
+      <h2>HTML</h2>
+      <dl>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html"><code>&lt;html&gt;</code></a></dt>
         <dd>This identifies what sort of document the file is.</dd>
         <dd>One should also set the <code>lang</code> attribute for SEO purposes.</dd>
-        <dt>&lt;head&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a></dt>
         <dd>Nothing in here shows up rendered in the webpage.</dd>
-        <dd>Typically contains &lt;meta&gt;, &lt;title&gt;, &lt;link&gt;, and &lt;script &gt;with &lt;defer&gt; set.</dd>
-        <dt>&lt;meta&gt;</dt>
+        <dd>Typically contains <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>, and <code>&lt;script &gt;</code>with <code>&lt;defer&gt;</code> set.</dd>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a></dt>
         <dd>Declare character set here.</dd>
-        <dt>&lt;title&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title"><code>&lt;title&gt;</code></a></dt>
         <dd>The title of the window of the webpage goes here.</dd>
-        <dt>&lt;link&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a></dt>
         <dd>Contains reference to CSS style-sheet among other documents.</dd>
-        <dt>&lt;script&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a></dt>
         <dd>References Javascript file; user can enclose code inside here also.</dd>
-        <dt>&lt;body&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a></dt>
         <dd>Contains all rendered content.</dd>
-        <dt>&lt;h1&gt;</dt>
+        <dt><code>&lt;h1&gt;</code></dt>
         <dd>Contains the rendered title of the webpage.</dd>
-        <dt>&lt;h[2-6]&gt;</dt>
-        <dd>Contains the title of some section lesser than the element that encloses &lt;h1&gt;</dd>
-        <dt>&lt;p&gt;</dt>
+        <dt><code>&lt;h[2-6]&gt;</code></dt>
+        <dd>Contains the title of some section lesser than the element that encloses <code>&lt;h1&gt;</code></dd>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a></dt>
         <dd>Contains paragraphs of text.</dd>
-        <dt>&lt;em&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a></dt>
         <dd>Contains text meant to be emphasized.</dd>
-        <dd>TODO: Explain how it differs from &lt;strong&gt;</dd>
+        <dd>TODO: Explain how it differs from <code>&lt;strong&gt;</code></dd>
         <dd>
           Examples
           <ul>
           </ul>
         </dd>
-        <dt>&lt;strong&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a></dt>
         <dd>Contains important text.</dd>
-        <dd>TODO: Explain how it differs from &lt;em&gt;</dd>
+        <dd>TODO: Explain how it differs from <code>&lt;em&gt;</code></dd>
         <dd>
           Examples
           <ul>
           </ul>
         </dd>
-        <dt>&lt;blockquote&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a></dt>
+        <dd>
+          To link to a certain section of a webpage:
+          <ol>
+            <li>Affix the desired section with an <code>id</code> attribute (e.g. my-id).</li>
+            <li>In the tag, set the <code>&lt;href&gt;</code> attribute to "#", followed by the <code>&lt;id&gt;</code> value (e.g. <code>&lt;a href="#my-id"&gt;clickable text&lt;/a&gt;</code>)</li>
+          </ol>
+          <p>If linking to a that webpage section from a different webpage:
+          <p><code>&lt;a href="/mysite/different-page#my-id"&gt;clickable text&lt;/a&gt;</code></p>
+        </dd>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"><code>&lt;blockquote&gt;</code></a></dt>
         <dd>TODO</dd>
-        <dt>&lt;header&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"><code>&lt;header&gt;</code></a></dt>
         <dd>TODO</dd>
-        <dt>&lt;nav&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"><code>&lt;nav&gt;</code></a></dt>
         <dd>TODO</dd>
-        <dt>&lt;section&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a></dt>
         <dd>TODO</dd>
-        <dt>&lt;article&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a></dt>
         <dd>TODO</dd>
-        <dt>&lt;footer&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a></dt>
         <dd>TODO</dd>
-        <dt>&lt;aside&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside"><code>&lt;aside&gt;</code></a></dt>
         <dd>TODO</dd>
-        <dt>&lt;main&gt;</dt>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main"><code>&lt;main&gt;</code></a></dt>
         <dd>TODO</dd>
-      </article>
-      <article>
-        <h3>CSS</h3>
-      </article>
-    </section>
+      </dl>
+    </article>
+
+    <article>
+      <!-- TODO: Add MDN links here. -->
+      <h3>CSS</h3>
+      <dl>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"><code>&lt;rgb&gt;</code></a></dt>
+        <dd>Is supported in most browsers.</dd>
+        <dd>Hue is represented by a color wheel (0..360).</dd>
+        <dd>Saturation and lightness are represented by percentages.</dd>
+        <dd>Implemented by the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb">rgb</a> function</dd>
+        <dd>Alpha-value specified as fourth argument, following a forward slash.</dd>
+        <dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"><code>&lt;hsl&gt;</code></a></dt>
+        <dd>A model in which the addition of colors are additive.</dd>
+        <dd>Each value for red, green, and blue is represented by an integer from 0 to 255.</dd>
+        <dd>Implemented by the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl">hsl</a> function</dd>
+        <dd>Alpha-value specified as fourth argument, following a forward slash.</dd>
+      </dl>
+    </article>
   </main>
 
   <!-- TODO: To be visible site-wide; update as necessary for consistency -->
