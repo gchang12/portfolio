@@ -1,4 +1,6 @@
 images/*
 !images/site-icon.jpg
 !images/background-img.jpg
+!images/earphones.jpg
+!images/water-bottle.jpg
 *.sw[a-z]
