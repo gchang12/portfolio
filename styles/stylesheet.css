@@ -47,6 +47,7 @@ main {
 #site-icon {
   width: 235px;
   height: 200px;
+  background-image: url("../images/site-icon.jpg");
 }
 #background {
   width: calc(100% - 235px);
