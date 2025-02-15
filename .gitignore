@@ -4,3 +4,4 @@ images/*
 !images/earphones.jpg
 !images/water-bottle.jpg
 *.sw[a-z]
+.vim/
