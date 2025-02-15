@@ -11,7 +11,7 @@
   <!-- TODO: To be visible site-wide; update as necessary for consistency -->
   <header>
     <div id="site-icon" class="header-content icon">
-      <a href="./index.html">
+      <a href="./index.html" title="Click to return to index">
         <!-- https://openverse.org/image/8f3ed85f-805c-45e3-ab57-f98dae71d6f7?q=periwinkle&p=8 -->
         <!-- src="./images/site-icon.jpg" -->
         <!-- <img src="./images/site-icon.jpg" alt="A periwinkle" height="200" > -->
@@ -164,6 +164,145 @@
             <dd>Can be specified in terms of absolute units (e.g. px, mm, pt).</dd>
           </dl>
         </article>
+        <article>
+          <h3>Flexbox</h3>
+          <ul>
+            <li>one of the best ways to lay out websites.</li>
+            <li>it has control over how elements are placed on-page.</li>
+            <li>works on all modern browsers</li>
+          </ul>
+          <p>Items that leverage flexbox require a container</p>
+          <p>Initially, flex-direction is 'row' (i.e. the children of the flex-container will be laid out horizontally)
+          <h4>Properties</h4>
+          <h5>direction</h5>
+          <ul>
+            <li>row, column, row-reverse, column-reverse] </li>
+            <li>*reverse properties align elements to the right</li>
+          </ul>
+          <h5>wrap</h5>
+          <ul>
+            <li>wrap: wraps content if the page is too small to contain it </li>
+            <li>wrap-reverse: wraps content while putting last element first</li>
+            <li>no-wrap: compresses content</li>
+          </ul>
+          <h5>justify-content</h5>
+          <ul>
+            <li>space-between: Makes sure that between each element there is... you know.</li>
+            <li>space-evenly: Spaces elements evenly, inclusive of boundaries</li>
+            <li>align items wrt main axis</li>
+          </ul>
+          <h5>align-items</h5>
+          <ul>
+            <li>align items wrt cross axis</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Fonts</h3>
+          <p><strong>Not bothering to use fonts properly will result in getting sued for copyright infringement</strong></p>
+          <h3>font-family</h3>
+          <ul>
+            <li>specifies a prioritized name of font family names and / or generic names</li>
+            <li>user's system will display fonts that it has available that most closely matches</li>
+            <li>names are separated by commas</li>
+            <li>names with embedded spaces are enclosed within double-quotation marks</li>
+          </ul>
+          <h4>font-weight</h4>
+          <ul>
+            <li>controls how thick / thin the characters are.</li>
+            <li>describe values by: semantic descriptors, "lighter", "normal", "bold", "bolder", numeric descriptors: {100..900} where 100 is the thinnest</li>
+          </ul>
+          <h4>font-style</h4>
+          <ul>
+            <li>used in order to italicize text</li>
+            <li>describe values by: normal, italic, oblique, initial, inherit</li>
+          </ul>
+          <h4>font-size</h4>
+          <ul>
+            <li>px, em, rem, percentage</li>
+          </ul>
+          <h4>Google Fonts</h4>
+          <ul>
+            <li>was started back in 2010</li>
+            <li>offers fonts for free</li>
+          </ul>
+          <h4>Font Awesome</h4>
+          <ul>
+            <li>has a free tier and a paid tier</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Positioning</h3>
+          <h4>values</h4>
+          <ul>
+            <li>sticky</li>
+            <li>relative</li>
+            <li>static</li>
+            <li>absolute</li>
+          </ul>
+          <h4>properties</h4>
+          <ul>
+            <li>top</li>
+            <li>left</li>
+            <li>right</li>
+            <li>bottom</li>
+          </ul>
+        </article>
+        <article>
+          <h3>The Box Model</h3>
+          <p>The box model describes the structure of every HTML element that's rendered. All elements are composed of four smaller rectangles: content, padding, border, and margin. Each of these is nested within the previous.</p>
+          <p>Think: Shipping box.</p>
+          <p>Center contains the content, the text or media.</p>
+          <p>Around the content goes the padding, which is like the bubble wrap.</p>
+          <p>Around the padding goes the border, which is like the box the content comes in.</p>
+          <p>Margin goes around the element as the space around the box.</p>
+          <p>Each layer of the box model can be configured via CSS.</p>
+          <p>CSS properties can be applied to</p>
+          <ul>
+            <li>width</li>
+            <li>height</li>
+            <li>bg-color</li>
+          </ul>
+          <p>It's good practice to set the width and height for a given element so that no flexibility is left for the content to take up the space it needs.</p>
+          <p>Padding does NOT obstruct the content at all.</p>
+          <p>Padding is invisible.</p>
+          <p>At least two rules are needed to make borders appear:</p>
+          <ul>
+            <li>width</li>
+            <li>style</li>
+          </ul>
+          <p>Shorthand takes argument as</p>
+          <ul>
+            <li>width</li>
+            <li>style</li>
+            <li>color</li>
+          </ul>
+          <p>Background color does not extend into the margin area of a box.</p>
+          <p>Declare margin via:</p>
+            <ul>
+              <li>margin-top</li>
+              <li>margin-bottom</li>
+              <li>margin-left</li>
+              <li>margin-right</li>
+            </ul>
+            <p>margin shorthand:</p>
+            <ul>
+              <li>top, left-right, bottom</li>
+              <li>top-bottom, left-right</li>
+              <li>clock-style: top, right, bottom, left</li>
+              <li>all-sides</li>
+            </ul>
+            <p>use box-sizing property to use alt-box model</p>
+            <ul>
+              <li>set: 'border-box'</li>
+            </ul>
+            <p>Otherwise, sizing will affect only the content box.</p>
+            <p>border defaults</p>
+            <ul>
+              <li>width = 1px</li>
+              <li>style = none</li>
+              <li>color = same as content</li>
+            </ul>
+        </article>
       </section>
 
     </main>
@@ -207,87 +346,3 @@
 
 </body>
 </html>
-
-<!--
-Flexbox
-- one of the best ways to lay out websites.
-- it has control over how elements are placed on-page.
-- works on all modern browsers
-Items that leverage flexbox require a container
-Initially, flex-direction is 'row'
-i.e. the children of the flex-container will be laid out horizontally
-# Properties
-direction
-- row, column, row-reverse, column-reverse] 
-- *reverse properties align elements to the right
-wrap
-- wrap: wraps content if the page is too small to contain it 
-- wrap-reverse: wraps content while putting last element first
-- no-wrap: compresses content
-justify-content
-- space-between: Makes sure that between each element there is... you know.
-- space-evenly: Spaces elements evenly, inclusive of boundaries
-- align items wrt main axis
-align-items
-- align items wrt cross axis
--->
-
-<!--
-Font-family
-- specifies a prioritized name of font family names and / or generic names
-- user's system will display fonts that it has available that most closely matches
-- names are separated by commas
-- names with embedded spaces are enclosed within double-quotation marks
-font-weight
-- controls how thick / thin the characters are.
-- describe values by: semantic descriptors, "lighter", "normal", "bold", "bolder", numeric descriptors: {100..900} where 100 is the thinnest
-font-style
-- used in order to italicize text
-- describe values by: normal, italic, oblique, initial, inherit
-font-size
-- px, em, rem, percentage
-Google Fonts
-- was started back in 2010
-- offers fonts for free
-Font Awesome
-- has a free tier and a paid tier
--->
-
-<!-- 
-The box model describes the structure of every HTML element that's rendered. All elements are composed of four smaller rectangles: content, padding, border, and margin. Each of these is nested within the previous.
-Think: Shipping box.
-Center contains the content, the text or media.
-Around the content goes the padding, which is like the bubble wrap.
-Around the padding goes the border, which is like the box the content comes in.
-Margin goes around the element as the space around the box.
-Each layer of the box model can be configured via CSS.
-CSS properties can be applied to
-width, height, bg-color
-It's good practice to set the width and height for a given element so that no flexibility is left for the content to take up the space it needs.
-Padding does NOT obstruct the content at all.
-Padding is invisible.
-At least two rules are needed to make borders appear:
-- width, style
-Shorthand takes argument as: width, style, color
-Background color does not extend into the margin area of a box.
-Declare margin via margin-{top,bottom,left,right}
-margin shorthand:
-- top, left-right, bottom
-- top-bottom, left-right
-- clock-style: top, right, bottom, left
-- all-sides
-use box-sizing property to use alt-box model
-- set: 'border-box'
-Otherwise, sizing will affect only the content box.
-border defaults
-- width = 1px
-- style = none
-- color = same as content
- -->
-
-<!-- 
-Positioning
-- values: sticky, relative, static, absolute
-- properties: top, left, right, bottom
- -->
-
