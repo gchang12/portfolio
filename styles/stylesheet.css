@@ -26,8 +26,10 @@ header {
 }
 nav {
   width: 235px;
+  min-width: 235px;
   /* TODO: Need to figure out how to put <main> and <nav> side by side. */
   /* display: inline-block; */
+  background-color: green;
 }
 nav li:hover {
   /* TODO: Figure out how to have the background change once the user hovers over the link and not just the border. */
@@ -36,6 +38,7 @@ nav li:hover {
 main {
   background-color: purple;
   /* display: inline-block; */
+  width: 100%;
 }
 .reminders:hover {
   background-color: red;
@@ -73,4 +76,7 @@ nav > ul > li > a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+#nav-and-main {
+  display: flex;
 }
