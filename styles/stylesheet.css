@@ -11,6 +11,7 @@ Include a link to the stylesheet in the head section of each of the html pages. 
 Use git to commit your work as you go. Push your work up to your “portfolio” repository on GitHub main branch, and submit a link to the GitHub repo and your GitHub pages site for the assignment. I will view the pages via your personal GitHub Pages URL and expect everything to be functional (no broken images or links, etc). Refer to Lesson 00 and 01 if you need a refresher on git & GitHub.
  
  */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 body {
   background-color: black;
@@ -39,6 +40,7 @@ main {
   background-color: purple;
   /* display: inline-block; */
   width: 100%;
+  padding: 1em;
 }
 .reminders:hover {
   background-color: red;
@@ -79,4 +81,13 @@ nav > ul > li > a {
 }
 #nav-and-main {
   display: flex;
+}
+h1 {
+  font-family: "Italianno", serif;
+  font-weight: 400, normal;
+}
+#site-icon > a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
