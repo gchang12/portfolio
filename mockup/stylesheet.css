@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+  /* Implement DRY Principle here. */
+  --dark-grey: rgb(58 58 58);
+}
+aside {
+  /* For debugging purposes. */
+  border: 3px solid red;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+aside h3 {
+  color: var(--dark-grey);
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+aside p {
+  color: var(--dark-grey);
+}
+aside a {
+  color: rgb(44 154 183);
+}
+aside figcaption {
+  color: var(--dark-grey);
+}
