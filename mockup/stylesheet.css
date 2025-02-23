@@ -1,15 +1,18 @@
+/* _GLOBAL_ */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 :root {
   /* Implement DRY Principle here. */
   --dark-grey: rgb(58 58 58);
+  --light-grey: rgb(235 235 235);
   --sky-blue: rgb(44 154 183);
 }
+
+/* ASIDE */
 aside {
   color: var(--dark-grey);
   /* For debugging purposes. */
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 .roboto {
   font-family: "Roboto", sans-serif;
@@ -71,13 +74,53 @@ aside a {
   width: 100%;
   text-align: center;
 }
+
+/* HEADER */
 header {
   background-color: var(--sky-blue);
   color: white;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  padding: 2rem 0;
 }
-h1 {
-  margin: 0;
+body {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
 }
-h2 {
+h2.roboto {
   margin: 0;
+  font-style: italic;
+}
+h1.roboto {
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: var(--light-grey);
+  height: 5rem;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  /* justify-items: center; */
+}
+nav > ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /* height: 50%; */
+}
+nav > ul > li {
+  list-style-type: none;
+  font-weight: 700;
+  display:
+}
+nav > ul > li + li::before {
+  content: "/";
+}
+nav > ul > li > a {
 }
