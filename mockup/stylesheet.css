@@ -4,32 +4,80 @@
 :root {
   /* Implement DRY Principle here. */
   --dark-grey: rgb(58 58 58);
+  --sky-blue: rgb(44 154 183);
 }
 aside {
+  color: var(--dark-grey);
   /* For debugging purposes. */
   border: 3px solid red;
+}
+.roboto {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+  width: calc(320px + 2rem);
 }
 aside h3 {
-  color: var(--dark-grey);
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
+  text-transform: uppercase;
+  /* color: var(--dark-grey); */
+  /* font-family: "Roboto", sans-serif; */
+  /* font-optical-sizing: auto; */
   font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  /* font-style: normal; */
+  /* font-variation-settings: "wdth" 100; */
 }
 aside p {
-  color: var(--dark-grey);
+  /* color: var(--dark-grey); */
 }
 aside a {
   color: rgb(44 154 183);
 }
 aside figcaption {
-  color: var(--dark-grey);
+  /* color: var(--dark-grey); */
+}
+figure {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+aside > section {
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 0rem;
+  padding-left: 1rem;
+}
+aside > section > article {
+  padding-bottom: 1rem;
+}
+aside > section h3 {
+  padding-bottom: 1rem;
+}
+aside a {
+  padding: 1rem;
+}
+.more-info {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.more-info > a {
+  width: 100%;
+  text-align: center;
+}
+header {
+  background-color: var(--sky-blue);
+  color: white;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
 }
