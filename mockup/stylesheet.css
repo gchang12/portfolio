@@ -6,6 +6,17 @@
   --dark-grey: rgb(58 58 58);
   --light-grey: rgb(235 235 235);
   --sky-blue: rgb(44 154 183);
+  --afternoon-sky-blue: rgb(35 154 185);
+  --sunny-sky-blue: rgb(82 186 213);
+  --horizon-sky-blue: rgb(44 154 183);
+  --navi-width: 60%;
+}
+body > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-left: 10rem; */
+  /* padding-left: 4rem; */
 }
 
 /* ASIDE */
@@ -16,12 +27,15 @@ aside {
 }
 .roboto {
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
   font-weight: 300;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
   width: calc(320px + 2rem);
+}
+h3, p, aside {
+  font-family: "Roboto", sans-serif;
 }
 aside h3 {
   text-transform: uppercase;
@@ -56,23 +70,32 @@ aside > section {
   padding-bottom: 0rem;
   padding-left: 1rem;
 }
-aside > section > article {
+aside > section > * {
   padding-bottom: 1rem;
 }
 aside > section h3 {
   padding-bottom: 1rem;
+  margin: 0;
 }
 aside a {
   padding: 1rem;
+  padding-left: 0;
 }
+/* .more-info { */
 .more-info {
   display: flex;
   /* align-items: center; */
   /* justify-content: center; */
 }
 .more-info > a {
-  width: 100%;
-  text-align: center;
+/* figure a { */
+  /* display: inline-block; */
+  /* width: 100%; */
+  /* text-align: center; */
+  padding-left: 0;
+}
+aside > section > * {
+  margin: 0;
 }
 
 /* HEADER */
@@ -83,11 +106,14 @@ header {
   /* flex-direction: column; */
   /* align-items: center; */
   padding: 2rem 0;
+  align-items: center;
 }
 body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: auto 0;
+  /* padding: 0 auto; */
 }
 h2.roboto {
   margin: 0;
@@ -98,35 +124,134 @@ h1.roboto {
   font-weight: 700;
   text-transform: uppercase;
 }
+#headers {
+  width: var(--navi-width);
+}
 
 /* NAVIGATION */
 nav {
   background-color: var(--light-grey);
   height: 5rem;
   display: flex;
-  /* flex-direction: column; */
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
   /* justify-items: center; */
+  /* justify-content: center; */
+  justify-content: space-around;
 }
-nav > ul {
+ul.navilist {
   display: flex;
   margin: 0;
   padding: 0;
-  /* height: 50%; */
-  justify-content: space-around;
+  height: 50%;
+  justify-content: space-between;
   /* width: 60rem; */
-  width: 60%;
+  width: var(--navi-width);
 }
-nav > ul > li {
+ul.navilist > li {
   list-style-type: none;
   font-weight: 700;
   /* width: 10rem; */
 }
-nav > ul > li + li::before {
+ul.navilist a {
+  text-decoration: none;
+  color: black;
+  /* display: inline-block; */
+  /* height: 100%; */
+  /* width: 100%; */
+}
+ul.navilist a:hover {
+  color: blue;
+}
+ul.navilist > li + li::before {
   /* Stuff like this really belongs in the CSS, rather than the HTML layer. */
   content: "/";
   /* Failed attempts at evenly spacing the inserted slash between the nav > li */
   /* width: 10rem; */
   /* padding: 2rem; */
   /* padding: 5%; */
+}
+
+/* MAIN */
+#kitten-thoughts > h3 {
+  color: var(--afternoon-sky-blue);
+  padding: 1rem;
+  padding-left: 0;
+  margin: 0;
+}
+#kitten-quotes > blockquote {
+  color: var(--sunny-sky-blue);
+  margin-left: 0;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+main a {
+  color: var(--horizon-sky-blue);
+}
+main {
+  display: flex;
+  flex-direction: row;
+  width: var(--navi-width);
+  align-self: center;
+}
+#content {
+  width: 50rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: flex-start; */
+  align-self: start;
+}
+.attribution {
+  font-style: italic;
+}
+main p {
+  margin: 1rem 0;
+  /* margin-bottom: 2rem; */
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--dark-grey);
+  color: white;
+  padding: 2rem;
+}
+.content {
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+footer img {
+  /* https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content#centering_the_image */
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+footer figcaption {
+  text-align: center;
+}
+#footer-links {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+#footer-links .navilist {
+  width: 100%;
+  margin: 2rem;
+}
+#footer-links .navilist > li {
+  margin: 0rem 1rem;
+}
+#copyright-location {
+  margin: 1rem 0rem;
+}
+#company-name::after {
+  content: " |";
+}
+footer figcaption > span {
+  margin: 2rem 0rem 1rem;
+  display: inline-block;
+  width: 55%;
 }
