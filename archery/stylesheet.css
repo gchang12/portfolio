@@ -122,6 +122,15 @@ video {
   float: left;
   margin: 2rem;
 }
+q,
+blockquote {
+  font-size: 30px;
+  color: #03a3df;
+}
+cite {
+  font-size: 14px;
+  text-transform: uppercase;
+}
 
 /* FOOTER */
 footer {
