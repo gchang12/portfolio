@@ -118,6 +118,10 @@ aside {
 .bio > * {
   margin: 1rem;
 }
+video {
+  float: left;
+  margin: 2rem;
+}
 
 /* FOOTER */
 footer {
