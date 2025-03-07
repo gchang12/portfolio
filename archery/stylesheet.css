@@ -87,7 +87,7 @@ main {
   background-color: white;
   /* background-color: var(--secondary-blue); */
   padding: 2rem;
-  column-gap: 7%;
+  column-gap: 15%;
 }
 main > * {
   max-width: 60rem;
@@ -145,3 +145,4 @@ footer a:hover {
 footer h2 {
   text-align: left;
 }
+
