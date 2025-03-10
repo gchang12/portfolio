@@ -431,8 +431,6 @@
     - kind: Declare what the track element is being used for.
  -->
 
-
-
 <!-- 
   Grid
   - A means of dividing horizontal and vertical space on a webpage into consistent units.
@@ -456,3 +454,69 @@
   - enables layout in consistently-spaced columns and rows.
   - float and position attributes have no effect on elements within this layout.
  -->
+
+<!--
+  Javascript can change a webpage by accessing the DOM
+  Learning the DOM will make learning Javascript easier to learn.
+  DOM = Document Object Model
+  Representation of a webpage that is computed by the browser
+  It can be interfaced with.
+  Browser computes the DOM from the HTML and JS that it receives for a page.
+  Represents HTML elements as nodes in a tree-like structure
+  Node != HTML element, but they can be thought of as such (ideally)
+  If you create a webpage via HTML only, then the DOM will be equivalent to the HTML
+  The browser dev-console shows what the DOM looks like
+  Why DOM and HTML may differ.
+  - There were errors in the HTML.
+  - Javascript may dynamically change the HTML.
+  - a server-side language may have changed the HTML
+  DOM
+  - a structured set of interfaces for programming languages to interact with it
+  - a set of specs made by the W3C that serve as guidelines for how browsers should behave.
+  - browsers provide a set of standard ways for programming languages to interact with the computed DOM
+  - each browser implements parts of that spec in whatever way it wishes, but ideally and most of the time in accordance with W3C standards.
+-->
+
+<!-- 
+  Accessibility
+  - making website accessible to all users.
+  - about nineteen percent of Americans have trouble using the internet
+  - it is the duty of all web developers to make their sites accessible to this demographic
+  - visual: blind, low sight, color-blind
+  - audio: deaf, hard of hearing
+  - motor function impairments
+  - socioeconomic factors also
+    - users who don't have access to internet at home
+    - users who can access the internet only in public spaces and for limited periods of time
+    - users who live in rural areas may be unable to browse normally
+    - W3C has an article on accessibility
+    - nvaccess.org: A screen reader application.
+ -->
+
+<!-- 
+  A11Y = Accessibility
+  Contrast ratio should be - 4.5:1
+  Use Web AIM to make sure color contrast between text and background is at least 4.5:1
+  Ease of clickability
+  - some users may have trouble clicking on small icons
+  - solution: provide padding and margin (works on inline items!)
+  To hide items:
+  - set position=relative,directional parameters to extreme values
+  - e.g. {position: relative: left: -10000px;}
+  - set an extra ruleset for that hidden item when that item gains focus via <Tab>
+    - makes for quick and easy jumping.
+    - idea: A navigational menu for <Tab>-users.
+    - set {overflow:hidden;}, {height,width: (minuscule)}
+  Content only for screen-readers
+  - sr-only: A class introduced by Bootstrap to denote such content.
+  Tab users
+  - see attribute: "tabindex"
+  - note: Using this is almost always a bad idea; it makes navigation a pain
+  Zooming
+  - must ensure site works at 200% magnification
+  - text must either shrink or grow in accordance with screen size
+  Alt text
+  - One of the most important parts of making the Web accessible
+  - decorative elements want no alt-text (in fact, just use CSS imagery for this)
+-->
+
