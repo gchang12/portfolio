@@ -1,10 +1,21 @@
+/* NEW ACCESSIBILITY FEATURES */
+/* Increased background-text color contrast in header */
+/* Transformed navigational links into buttons */
+/* Made it easier for any user to find the address. */
+/* Put some sr-only text in the Services page. */
 
 /* _GLOBAL_ */
 :root {
-  --primary-blue: rgb(3 163 223);
-  --secondary-blue: rgb(27 68 127);
-  --secondary-yellow: rgb(236 183 34);
-  --secondary-black: rgb(68 68 68);
+  --primary-blue: #037EAB;
+  /* --primary-blue: #03A3DF; */
+
+  /* --primary-blue: rgb(3 163 223); */
+  --secondary-blue: #1B447F;
+  /* --secondary-blue: rgb(27 68 127); */
+  --secondary-yellow: #ECB722;
+  /* --secondary-yellow: rgb(236 183 34); */
+  --secondary-black: #444444;
+  /* --secondary-black: rgb(68 68 68); */
 }
 body {
   margin: 0;
@@ -12,6 +23,14 @@ body {
   color: var(--secondary-black);
   font-family: Arial;
   font-size: 17px;
+}
+.sr-only {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -26,10 +45,49 @@ header {
 a[href='index.html'] {
   display: inline-block;
 }
-.nav {
+nav > ul {
   padding: 0;
   margin: 0;
   display: flex;
+  height: 3rem;
+}
+nav > ul > li {
+  /* padding: 1rem; */
+  /* margin: 1rem; */
+  margin: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 100%;
+  /* padding-left: 1rem; */
+  /* padding-right: 1rem; */
+  background-color: var(--secondary-blue);
+  border: 0.25rem solid white;
+}
+nav > ul > li:hover {
+  border-color: var(--secondary-blue);
+  transition: border-color 0.25s;
+}
+nav > ul > li:focus {
+  border-color: var(--secondary-blue);
+  transition: border-color 0.25s;
+}
+nav > ul a:hover {
+  background-color: var(--secondary-yellow);
+  transition: background-color 0.25s;
+}
+nav > ul a:focus {
+  background-color: var(--secondary-yellow);
+  /* transition: background-color 0.25s; */
+}
+nav > ul a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 10rem;
 }
 /* .nav > li + li::before {
   content: " / ";
@@ -37,9 +95,6 @@ a[href='index.html'] {
 li {
   list-style-type: none;
   margin: 1rem;
-}
-.nav a {
-  color: white;
 }
 h1 {
   text-align: center;
@@ -108,6 +163,8 @@ aside {
   color: white;
   /* align-self: center; */
   /* justify-self: right; */
+  /* border: 0.25rem solid var(--secondary-yellow); */
+  /* height: 20rem; */
 }
 .important {
   grid-area: main-top;
@@ -143,7 +200,22 @@ footer {
 footer > article {
   color: white;
   /* align-self: center; */
+  /* font-size: 2rem; */
   /* max-width: 20%; */
+  /* padding: 2rem; */
+  padding: 1rem;
+}
+footer > article:target {
+  color: var(--secondary-black);
+  background-color: white;
+  border: 0.25rem solid var(--secondary-yellow);
+  transition: background-color 1s;
+}
+footer > article:hover {
+  color: var(--secondary-black);
+  background-color: white;
+  border: 0.25rem solid var(--secondary-yellow);
+  transition: background-color 1s;
 }
 footer a {
   color: inherit;
