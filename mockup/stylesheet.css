@@ -231,17 +231,17 @@ footer img {
 footer figcaption {
   text-align: center;
 }
-#footer-links {
+nav {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
 }
-#footer-links .navilist {
+nav > ul {
   width: 100%;
   margin: 2rem;
 }
-#footer-links .navilist > li {
+nav > ul > li {
   margin: 0rem 1rem;
 }
 #copyright-location {
