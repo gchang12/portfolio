@@ -1,3 +1,8 @@
+/* NEW ACCESSIBILITY FEATURES */
+/* Text-background color contrast is now at least 4.5:1 */
+/* Navigational links are now buttons. */
+/* New sr-only text has been added. */
+
 /* _GLOBAL_ */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -6,9 +11,14 @@
   --dark-grey: rgb(58 58 58);
   --light-grey: rgb(235 235 235);
   --sky-blue: rgb(44 154 183);
-  --afternoon-sky-blue: rgb(35 154 185);
-  --sunny-sky-blue: rgb(82 186 213);
-  --horizon-sky-blue: rgb(44 154 183);
+  /* The font color is now 4.5:1 wrt the white background. */
+  /* --sky-blue: #257F98; */
+  --afternoon-sky-blue: #1D819A;
+  /* --afternoon-sky-blue: rgb(35 154 185); */
+  --sunny-sky-blue: #247D94;
+  /* --sunny-sky-blue: rgb(82 186 213); */
+  --horizon-sky-blue: #257F98;
+  /* --horizon-sky-blue: rgb(44 154 183); */
   --navi-width: 60%;
 }
 body > * {
@@ -17,6 +27,14 @@ body > * {
   align-items: center;
   /* margin-left: 10rem; */
   /* padding-left: 4rem; */
+}
+.sr-only {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /* ASIDE */
@@ -152,20 +170,45 @@ ul.navilist > li {
   list-style-type: none;
   font-weight: 700;
   /* width: 10rem; */
+  /* width: 2rem; */
+  height: 3rem;
+  /* width: 2rem; */
+  width: 10rem;
+  border: 1px solid black;
+  /* background-color: var(--sky-blue); */
+  background-color: #636363;
+}
+ul.navilist > li:hover {
+  background-color: rgb(82 186 213);
+  transition: background-color 0.25s;
+}
+ul.navilist a:focus {
+  background-color: rgb(82 186 213);
+  /* color: rgb(82 186 213); */
 }
 ul.navilist a {
   text-decoration: none;
-  color: black;
+  display: flex;
+  align-items: center;
+  /* justify-items: center; */
+  justify-content: space-around;
+  /* text-align: center; */
+  color: white;
+  height: 100%;
+  width: 100%;
+  /* line-height: 100%; */
+  /* display: inline-block; */
   /* display: inline-block; */
   /* height: 100%; */
   /* width: 100%; */
 }
 ul.navilist a:hover {
-  color: blue;
+  /* color: blue; */
+  color: white;
 }
 ul.navilist > li + li::before {
   /* Stuff like this really belongs in the CSS, rather than the HTML layer. */
-  content: "/";
+  /* content: "/"; */
   /* Failed attempts at evenly spacing the inserted slash between the nav > li */
   /* width: 10rem; */
   /* padding: 2rem; */
@@ -237,11 +280,14 @@ footer figcaption {
   /* justify-content: center; */
   align-items: center;
 }
+#footer-links a {
+  color: var(--light-grey);
+}
 #footer-links .navilist {
   width: 100%;
   margin: 2rem;
 }
-#footer-links .navilist > li {
+#footer-links ul.navilist > li {
   margin: 0rem 1rem;
 }
 #copyright-location {
