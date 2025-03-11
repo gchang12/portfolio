@@ -212,10 +212,10 @@ footer > article:target {
   transition: background-color 1s;
 }
 footer > article:hover {
-  color: var(--secondary-black);
-  background-color: white;
-  border: 0.25rem solid var(--secondary-yellow);
-  transition: background-color 1s;
+  color: white;
+  background-color: revert;
+  border: revert;
+  /* transition: background-color 1s; */
 }
 footer a {
   color: inherit;
