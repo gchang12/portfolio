@@ -8,6 +8,8 @@
 </head>
 <body>
 
+  <!-- TODO: Figure out how to control what goes into the clipboard when user copies page content -->
+
   <!-- TODO: To be visible site-wide; update as necessary for consistency -->
   <header>
     <div id="site-icon" class="header-content icon">
@@ -529,4 +531,56 @@
   - One of the most important parts of making the Web accessible
   - decorative elements want no alt-text (in fact, just use CSS imagery for this)
 -->
+
+
+ <!-- 
+   background-image
+   - useful to display part of an image differently
+   - accepts either `href` or `src` attributes
+   Other properties to style the background include:
+   -image
+   -color: Good practice to set this if the background doesn't load.
+   -repeat
+   -position
+   -size
+ -->
+
+ <!-- 
+   Gradients
+   - two varieties: linear and radial
+   - Linear: Goes in a straight line; (linear-gradient)
+   - Radial: originates from some center and spreads outwards
+   linear-gradient
+   - direction, start-color, end-color
+   - direction, start-color, end-color, transition-percentage
+   * direction: Can be angle or keyword
+   radial-gradient
+   - start-color, end-color
+   - start-color, end-color, transition-percentage
+   - gradient-shape, start-color, end-color, transition-percentage
+ -->
+
+ <!-- 
+   Responsive images
+   - make images responsive when resizing viewport
+   - use width property and media queries
+   - use srcset/sizes attributes to load depending on viewport size
+   Have image fill entire screen regardless of viewport size
+   - width: 100%
+   - height: auto
+   - if the image is inside a container, the image will fill the container as the container is resized
+   Have images behave differently at different sizes (don't want image to fill screen after width=600px)
+   - @media (min-width: 600px) {width: 600px;}
+   srcset/sizes properties
+   - allows us to define multiple image sizes inside browser
+   - use media queries to allow browser to decide which images to serve. ideal when we don't want phones to download too big of an image
+   - https://via.placeholder.com/300
+   <img>
+   - srcset="src1 size1, src2 size2"
+   - sizes="(condition1) size1-if-condition1, ..., [fallback]"
+   Browser caches images, so steps must be taken before previewing a website whose image configurations have changed.
+   - Head on over to the developer console.
+   - Check the 'Disable cache'
+   - Inspect 'Img' tab in the dev-console
+ -->
 
