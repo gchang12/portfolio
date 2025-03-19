@@ -7,36 +7,6 @@
 </head>
 <body>
 
-  <!-- 
-  Instructions
-      In the kitty course project, add a background image, using the background-image CSS property. Ensure that the photo looks appropriate on all viewport sizes. 
-      Ensure that all the other elements on the page display appropriately as the image changes. 
-      Add a gradient to the page. You won't be to see this unless you disable the background-image property. This is helpful in case the image doesn't load.
-      Make sure that all images on the site are appropriately sized.
-  When complete submit the link to your repo and live page. 
-  By the end of this lesson, you'll be able to:
-      Use "srcset" attribute on an image element to serve appropriately sized images for user's device
-      Use CSS to apply images and gradients to HTML elements
-      Explain the impact of images on website performance
-      Identify different strategies to make images responsive
-   -->
-
-   <!-- 
-  Scoring
-  You'll be graded on the quality and completeness of your answer (see Rubric below).
-  Rubric
-  09 Images & Responsive Design
-  Criteria 	Ratings 	Pts
-  This criterion is linked to a Learning Outcome background-image
-  - Use the background-image property to show an image
-  This criterion is linked to a Learning Outcome gradients
-  - Add a gradient
-  This criterion is linked to a Learning Outcome responsivity
-  - Images are responsive and scale without issue
-  This criterion is linked to a Learning Outcome images sized appropriately
-  - all imaged are sized appropriately
-   -->
-
   <header>
     <div id="headers">
       <h1 class="roboto">Kitties To Go!</h1>
@@ -103,11 +73,14 @@
         <!-- <h3>Cat of the Week</h3> -->
         <figure>
           <h3>Cat of the Week</h3>
-          <img
+            <img
               src="./mockup/lesson04-mock3-sidebar-cat.jpg"
-              alt="Kitten staring seemingly at the fourth wall"
-              width="320"
-              height="256" >
+              srcset="./mockup/lesson04-mock3-sidebar-cat.jpg 320w, ./mockup/lesson04-mock3-sidebar-cat_small.jpg"
+              sizes="(min-width: 700px) 320px, 160px"
+              alt="Kitten staring seemingly at the fourth wall" >
+              <!-- width="320" -->
+            <!-- height="256" -->
+          </picture>
           <figcaption>
             Stare at imaginary bug love blinks and purr purr purr purr.
           </figcaption>
@@ -123,11 +96,11 @@
   <footer>
     <div class="content">
       <figure>
+        <!-- Footer image should disappear if screen is small enough. -->
         <img
           src="./mockup/lesson04-mock4-footer-image.jpg"
           alt="Logo of sitting cat silhouette"
-          width="356"
-          height="83" >
+          width="326" >
         <figcaption>
           <span id="motto">
             Aborpos nisto inci tet aut que volupti beruptiberro to ex esseque invenienihil imaximu scideru ptistiusam consequunt
@@ -147,6 +120,7 @@
         <span id="company-city">Seattle, WA</span>
       </div>
     </div>
+    <p class="attribution">"<a rel="noopener noreferrer" href="https://www.flickr.com/photos/29638108@N06/6997692326">Kitten</a>" by <a rel="noopener noreferrer" href="https://www.flickr.com/photos/29638108@N06">www.metaphoricalplatypus.com</a> is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /></a>.</p>
   </footer>
 
 </body>

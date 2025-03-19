@@ -123,7 +123,7 @@ header {
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   align-items: center;
 }
 body {
@@ -144,6 +144,23 @@ h1.roboto {
 }
 #headers {
   width: var(--navi-width);
+  /* height: 100%; */
+  /* background-image: url("sleeping-kitten.jpg"); */
+  /* background: radial-gradient(var(--sky-blue)); */
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 2rem 4rem;
+}
+@media screen and (min-width: 700px) {
+  #headers {
+    background-image: linear-gradient(
+      to right,
+      rgb(44 154 183 / 100%) 60%,
+      rgb(0 0 0 / 0%),
+      rgb(44 154 183)
+      ), url("tabby-kitten.jpg");
+      /* https://openverse.org/image/64125604-48ea-49e7-8eab-33b5d494f88a?q=kitten&p=144 */
+  }
 }
 
 /* NAVIGATION */
@@ -257,6 +274,12 @@ footer {
   background-color: var(--dark-grey);
   color: white;
   padding: 2rem;
+}
+@media screen and (max-width: 700px) {
+  footer img {
+    width: 0;
+    height: 0;
+  }
 }
 .content {
   width: 60rem;
