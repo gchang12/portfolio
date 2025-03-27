@@ -3,24 +3,6 @@
 /* Navigational links are now buttons. */
 /* New sr-only text has been added. */
 
-/*
-Instructions
-Add media queries to the cats course project in order to ensure the cat images are sized to look appropriately.  This is somewhat subjective, but they should fill most of the space in the container.
-    On the home page, show the side bar previews only on iPad size and above. On mobile, your side bar should not be displayed.
-    Your header and footer should take up the full width on all screen sizes
-After completing this lesson, you will be able to:
-    Apply media queries in the context of printing​
-    Use logical operators with media queries​
-When complete submit the link to your repo and live page. 
-Optional Bonus work: Make the page printable
-Scoring
-You'll be graded on the quality and completeness of your answer (see Rubric below).
-Rubric
-The header and footer should take up the full width of the page on ALL screen sizes.
-Hide the side bar on mobile
-Your HTML & CSS should pass validation tests with no errors
-*/
-
 /* _GLOBAL_ */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
