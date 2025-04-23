@@ -415,8 +415,9 @@
 </body>
 </html>
 
+<!-- TODO: Convert to HTML -->
 
-<!-- 
+<!--
   Two new media elements in HTML5:
   - video
   - audio
@@ -606,5 +607,211 @@
   - medium devices: >= 768px
   - large devices: >= 992px
   - extra-large devices: >= 1200px
+ -->
+
+<!-- 
+Responsive Web Design
+  Responsive web design importance and basics
+  Testing tools and methods for mobile responsiveness
+  Design strategies: graceful degradation vs. progressive enhancement
+  CSS techniques: percentages, REMs/EMs, media queries, Flexbox
+  Importance of the viewport meta tag for mobile devices
+-->
+
+<!-- 
+Viewport
+  The viewport is the area through which users interact with web content, varying significantly across devices.
+  Designing for a range of viewport sizes is essential for responsive web design, with common categories including mobile, tablet, laptop, and desktop.
+  Developer tools in browsers, such as Chrome's DevTools, allow designers and developers to simulate different device sizes for testing purposes.
+  Extensions like Window Resizer offer quick adjustments to browser windows, emulating various device sizes for design and testing.
+-->
+
+<!-- 
+Debugging
+  Opening Chrome DevTools (Right-click > Inspect, Command+Alt+C on macOS, Control+Shift+C on Windows/Linux)
+  Navigating the Elements tab to inspect and edit HTML
+  Using the search function within DevTools (Command+F on macOS, Control+F on Windows/Linux)
+  Editing CSS directly in the browser
+  Adding new CSS properties
+  Disabling and deleting CSS properties
+  Editing an element's HTML (Right-click > Edit as HTML)
+  Moving HTML elements via click-and-drag
+  Saving changes made in DevTools back to the original HTML and CSS files
+-->
+
+<!-- 
+Forking and Cloning
+  Forking a GitHub repository
+  Cloning a repository to the local machine
+  Adding a git remote connection (upstream)
+  Checking remote connections with git remote -v
+  Creating and switching to new branches with git checkout
+  Adding, committing, and pushing changes to GitHub
+  Opening and merging pull requests
+  Updating local branches with changes from GitHub (pulling from origin and optionally upstream)
+ -->
+
+<!-- 
+Pull Requests
+  Forking and cloning repositories
+  Making changes and saving them in a text editor
+  Using git commands in the terminal: git clone, git add ., git status, git commit -m, and git push
+  Creating pull requests on GitHub
+  Understanding the role of pull requests in project collaboration
+-->
+
+<!-- 
+All sites are designed for a variety of screen sizes
+Designing for so many screens is now standard practice
+Responsive design matters because:
+- users will be frustrated with phone layout.
+- page may take too long to load
+DevTools, own phone, other simulators give dev a good idea of how their scren will look
+Websites are made responsive by conditioning on screen-size and switching code-bases as necessary
+Design theories for RWD
+- graceful degradation
+- progressive enhancement: design for mobile first (i.e. mobile first)
+While designing CSS:
+- Percentages for widths
+- REMS/EMS for font-sizing
+- media queries
+- flexbox
+- link size appropriate for touch
+70 to 80 characters
+Add breakpoints every 10 words
+Viewport
+- controls width and scaling
+- width = device-width
+- initial-scale = 1
+- don't disable user scaling
+I must remember to put this tag in.
+<meta name='viewport' content='width=device-width, initial-scale=1' >
+-->
+
+<!-- 
+The Viewport
+What is a viewport?
+A rectangular area where you can see computer graphics
+Content outside viewport is invisible until scrolled into view
+Most of the time it's just the browser
+Common viewport sizes
+mobile=320-480, tablet=768=1024, laptop=1024+, desktop=
+Bootstrap (CSS Framework) has its own breakpoints
+small: 576
+medium: 768
+large: 992
+extra-large: 1200
+Let project define specs
+Recreate viewport sizes via dev-tools
+
+DevTools is a very useful tool for developers.
+One can add elements, delete elements, edit elements, and so on.
+Any changes made to the browser version of a document are not reflected in the source
+
+Procedure for forking and cloning
+Get started
+1. Fork repo to GH space
+2. clone repo to PC
+3. Add git remote connection back to 'upstream'
+Workflow
+1. Create new branch off master for each assignment
+2. Push work on branch to fork
+3. Open pull request from assignment branch to master branch of fork
+4. After assignment is graded, merge pull request.
+
+git remote -v
+- list remote branches
+git remote add [alias] [location-of-repo]
+git push [alias] [branch-name]
+- presumably push contents of [branch-name] to [alias] connection
+git pull [alias] [branch-name]
+- download contents of remote-alias to branch
+
+Pull Requests
+- a means whereby changes can be commmitted back to the original repo
+- allow code to be reviewed, commented on, then merged in.
+-->
+
+
+<!-- User personas
+constitute UX design
+help designers and developers
+represent person using a site
+include attributes like image, age, work, hobbies, etc.
+multiple personas may be generated
+User persona for:
+prospective and incoming freshmen
+assume ~18 yo
+include field for other details
+e.g. prospective degrees and minor details
+Browser support
+Use info from user persona in order to determine which browsers to support
+focus support on most popular browsers for desktop and mobile
+Focus on supporting (chrome, firefox, safari, android!chrome)
+May want to pay attention to other browsers, like phone browsers
+Must ensure mobile responsivity
+Support fringe browsers as time allows: e.g. safari, ie, edge, opera
+How to know for sure?
+Do user research for new websites.
+Use analytics for existing websites
+Research will help you determine what to develop for
+
+Tools for testing sites:
+- browser support: desktop (chrome, safari, edge)
+- mobile (safari, android!chrome)
+- comon to support two most recent versions of browsers
+Responsiveness
+- site must work on as many devices and widths as possible
+- manipulate content with media queries
+- size defined in percentages and relative unites
+Design Considerations
+- graceful degradation
+- progressive enhancement (perferered)
+general rules
+- text, controls and images are aligned properly
+- hover and selection states highlight and color changes
+- suitable click area
+- color and shading and gradient are consistent
+- correct padding around edges.
+- text, images, controls and the like do not run into edges of screen
+- font size, style and color are consistent for each type of text
+- type, text, data and choice scroll and display properly
+- pages readable on all resolutions
+- horizontal bar is not visualized
+- content defined as important should be visual in all breakpoints
+- breakpoints match our design
+- option to alter layout for different breakpoints
+Tools to check sites
+- HTML5 validator
+- viewing site in browsers
+- devtools in major browsers
+- emulators
+- the actual devices if available
+*TEST IN ALL MAJOR BROWSERS!*
+Chrome, Safari, Firefox, Edge
+Most common way to test: resize window
+LImitations
+- hard to know precise dimenionns
+- hard to test interactions
+Sequence
+- common to develop for chrome first
+- develop for other browsers based on intel gathered
+Browser extensions
+- can be helpful to autoresize window
+- use discretion about adding extensions
+
+Testing responsiveness
+- browser devtools
+- chrome: DevTools
+Chrome: DevTools
+- toggle phone icon to change viewport width
+Emulators offer more precision when testing
+- e.g. XCODE allows one to emulate Apple devices
+Testing on actual devices
+- test on live site via phone
+- build private staging area
+- build local server on laptops
+  - requires python or node
+  - beware of security risks
  -->
 
