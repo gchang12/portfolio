@@ -1,4 +1,3 @@
-
 PROJECTS
 ========
 6: Simple landscale illustration
@@ -595,25 +594,28 @@ Overview
 1. Sampler Tool
 1. Color Palette
 
-TODO: Brushes - which to use?
-TODO: Clean up.
-
 Offsetting and sampling color
 =============================
 Making a color brighter or dimmer
 Drag the circle down...
-Use keyboards also
+Use keyboard also
 Toggle via shortcut ==\<K: Make the thing darker\>==
 Lay down base color
 Press K
 Shade!
 Press ==\<L: make thing lighter\>==
 Shine!
-Step intervals are usually sufficient.
+Default step-intervals are usually sufficient.
 If they aren't:
-Settings \> Color Selector Settings \> Docker \> Color Hotkeys \> (figure out rest)
+1. Settings
+2. Color Selector Settings
+3. Docker
+4. Color Hotkeys
+5. (figure out rest)
 To make shortcuts for other settings:
-Settings \> Keyboard Shortcuts \> search: 'make brush color'
+1. Settings
+2. Keyboard Shortcuts
+3. search: 'make brush color'
 Sampling color
 --------------
 ==\<P: Activate color sampler\>==
@@ -622,7 +624,7 @@ Sampling color
 Color Palette
 =============
 Container where you store and organize colors
-history and list are temporary repos
+history and list are temporary repos for color.
 Color palette configuration is more permanent
 Each square representing a color is called a `swatch`
 One can make a new palette by clicking on the rubix square in the 'Palette' Docker
@@ -633,19 +635,21 @@ Resource folder
 Folder where various data used by Krita is stored
 Where to locate it... It's OS dependent
 $HOME/.local/share/krita/
-Settings \> Manage Resources \> Open Resource Folder
+1. Settings
+2. Manage Resources
+3. Open Resource Folder
 
 Line tool
 =========
 Line tool detects pressure applied to stylus
-==\<S-drag: Open line tool\>==
-==\<Alt: Mid-drag, move line about\>==
+==\<Shift-Drag: Open line tool\>==
+==\<Alt: Mid-Drag, move line about\>==
 
 Rectangle and ellipse tool
 ==========================
 The two are similar, some would say
 To make a perfect ellipse, set ratio=1, then lock it.
-Alternatively, hold ==\<Shift while dragging: ensure ratio=1\>==
+Alternatively, hold ==\<Shift while dragging\>==; ensure ratio=1
 Hold ==\<Alt while dragging: Move shape elsewhere\>==
 Hold ==\<Ctrl while dragging: Fix center of transformation\>==
 
@@ -653,9 +657,9 @@ Polygon and Polyline
 ====================
 The two tools are similar, apparently
 Exit polygon creation via one of three methods
-Shift-click
-Enter
-Double-click
+- Shift-click
+- Enter
+- Double-click
 
 Mirror and Multibrush
 =====================
@@ -666,19 +670,22 @@ Sometimes they'll reflect yours on the other side of some virtual axis (mirror)
 Multibrush
 ----------
 Change number of brushes via Tool Options
-Change type of reflection via Tool Options \> Type
+Change type of reflection via:
+1. Tool Options
+2. Type
 Translate to draw grass easily
 
 Selection basics
 ================
-Image selection is needed to limit editing area
-- e.g. transformations, filters
+Image selection is needed to limit editing area. e.g.
+- transformations
+- filters
 Rectangular
 -----------
 ==\<Ctrl-R: Rectangular selection\>==
-To fill a selection with color: ==<Shift-Backspace>==
+To fill a selection with color: ==\<Shift-Backspace\>==
 Hybrid selection:
-1. Hold <Ctrl>
+1. Hold \<Ctrl\>
 2. Release mouse button
 3. Click-release for polygonal border
 
@@ -688,8 +695,8 @@ Layers are images we can stack atop each other in a document.
 Background layer included in every new document by default.
 Recommended to draw background in bg-layer
 Draw features closer to front in other layers
-Layer properties: <F3>
-==<Del: Change color of bg-layer to white>==
+Layer properties: \<F3\>
+==\<Del: Change color of bg-layer to white\>==
 
 Basic layer properties
 ======================
@@ -698,8 +705,10 @@ Locked
 Inherit Alpha
 - prereq: Layer grouping.
 Alpha Locked
-- Alpha locked... Function is to lock the layer. Only alpha channel gets locked, while others are not. i.e. Alpha-locking a layer makes sure that one can draw only existing pixels of an alpha-locked layer.
-- useful for shading and shining
+- Function is to lock the layer.
+- Only alpha channel gets locked, while others are not.
+- makes sure that one can draw only existing pixels of an alpha-locked layer.
+- useful for shading and shining.
 One can also change the color of the layers
 
 Group layer
@@ -708,22 +717,23 @@ Type of layer that contains other layers
 i.e. directory in a file-system
 Put layers in group
 - Select all layers to be grouped
-- Ctrl+G: Group layer
-Clickin on arrows also ungroups layers
+- \<Ctrl+G: Group layer\>
+Clicking on arrows also ungroups layers
 So does \<Ctrl+Alt+G\>
 Nested groups
-To group layers: Select + ==\<Ctrl+Alt+G\>==
+To group layers:
+1. Select
+2. ==\<Ctrl+Alt+G\>==
 
 Inherit Alpha
 =============
-Similar to 'alpha lock'
+Similar to `alpha lock`
 Locks condition of alpha layer
-Uses alpha data in layer itself
-inherit alpha uses alpha condition from all layers below
-Select 'inherit alpha' on layer whose canvas is to be constrained by below layers
-Wrap in group layers to restrict the 'constraining layers' to just the ones in the group layer
-
-TODO:
+Contrast:
+- `Alpha lock`: Uses alpha data in layer itself
+- `Inherit alpha`: uses alpha condition from all layers below
+Select `inherit alpha` on layer whose canvas is to be constrained by layers below
+Wrap in group layers to restrict the `constraining layers` to just the ones in the group layer
 
 Image Composition Practice
 ==========================
@@ -798,13 +808,13 @@ alt='rock jutting out of the grass surrounded by a blue featureless landscape su
 Move tool
 =========
 Move layers or images inside selection regions.
-\<T: Activate Move tool\>.
+\<T: Activate `Move` tool\>.
 Select layer, then click-drag to change position.
 Moving multiple layers is also possible.
-Modes
------
+Move Modes
+----------
 ### Move layer with content.
-Toggle in 'Tool Options'.
+Toggle in `Tool Options`.
 Krita auto-detects pixel under cursor and allows user to move the layer to which that pixel belongs.
 ### Move the whole group
 Should only be used for a layer inside a group.
@@ -813,15 +823,15 @@ Every layer in a Krita document is implicitly inside a group layer.
 ### Move with selction.
 Create selection.
 Press \<T\>
-Select 'Move current layer' (i.e. default)
+Select `Move current layer` (i.e. default)
 Only selected pixels are moved.
-\<CtrlShiftA\> to clear selection
+==\<Ctrl-Shift-A\> to clear selection==
 ### Moving via arrow keys
-Toggle step-size via 'Move Shortcut' in 'Tool Options'.
+Toggle step-size via `Move Shortcut` in `Tool Options`.
 Select layer.
 Press arrow-keys.
 \<Shift-Drag\>: Constrain direction to strictly cardinal directions
-Must hold down \<Shift\> while translating selected area, even though mode is 'Move current layer'
+Must hold down \<Shift\> while translating selected area, even though mode is `Move current layer`
 
 Opacity and Blending Modes
 ==========================
@@ -833,13 +843,18 @@ Both also accessible from 'layer properties' window.
 #### Opacity
 layer opacity != brush opacity
 layer opacity controls how opaque a layer is
-both properties are contextual
-i.e. display values of active layer
+both properties are contextual (i.e. display values of active layer)
 ### Blending Modes
-mathematical algorithm that control how colors in a certain layer mix with colors from the layers below.
-by default, blending mode is set to normal
+Mathematical algorithm that control how colors in a certain layer mix with colors from the layers below.
+By default, blending mode is set to normal
 Krita supports many blending modes
-most frequently used: normal, mutiply, screen, overlay, color dodge, lighten
+Most frequently used:
+- normal
+- mutiply
+- screen
+- overlay
+- color dodge
+- lighten
 #### Multiply
 Moving layer over another darkens it
 White will appear completely transparent
@@ -859,7 +874,10 @@ Perfectly 50% grey colors will be transparent
 #### Lighten
 Colors beneath will seem brighter
 Of the same family with 'Screen' mode
-Suitable for fog, mist, or air particles
+Suitable for:
+- fog
+- mist
+- air particles
 #### Color dodge
 Stronger than Screen
 Used for visual light effects
@@ -869,8 +887,1202 @@ Used for visual light effects
 ### Brush blending modes
 Blending modes are available on brushes also
 To access these modes, activate brush tool or any other tools based on it
-Note: Destructive feature
+*Note: Destructive feature*
 Must use same layer as target
 Make sure layer with star image is active
 
+--------------------------------
+\* EXERCISE: AXE ILLUSTRATION \*
+--------------------------------
 
+Drawing a Sketch
+================
+Recommended resolution: (1920, 1080)
+- said to be HD-size
+Larger image is okay also
+May need to adjust pixel settings (e.g. brush size)
+Fill the background with a color
+Create a different layer to put the sketch on
+Make sure tags are enabled tag in the Pop-Up Palette
+Select `Pencil-4-Soft` Brush Preset
+- Thumbnail looks like pencil
+*Avoid black for sketch!*
+- later the outline will be drawn in black
+- try to select another color, like brown
+Make axe have four elements
+- metal 
+- wood
+- cloth or fabric
+- crystal or gem thing
+blah all on one fucking layer whoopdeedoo
+after basic shape is done
+add details
+tidy up and determine which parts of fabri ar top and nedr
+put in more details like wood etchings
+draw in sharp part of axe
+in center insert gemstone
+put some bloody carvinfd fa bout gemstone
+put in some element designs and junk
+no references used
+everyhting came from imgaf df s
+always do research and use refimages in reallife stuff
+laerre lesson coer how to do the tskf kls s  
+save file in the thin fkd 
+
+Brush smoothing
+===============
+sometimes needed to smal fds smoth lone or outline
+this is called inking
+lots of tools and features fo t spurpose
+basic, weighted, stabilizer, dynbrush tool, assistant tool, vector otols
+must select feebrsh tool
+basic
+-----
+mode has no parameters
+basic useful only for budget drawing tablets and older such blah blah blah
+most drawing tablets already have a basic smoothing feature of brush etc
+brush smoothing > (none, basic, ...)
+\exists basic \implies tablet has one already
+weighted smoothing
+------------------
+- has got paremeters and unk
+distance, stroke ending, mooth pressure, scale fl dfdistance
+distance is not in pixels
+it is the number oevre ts ki krita programming terms
+storke ending paramter
+i sfor how aggressively krita draws a line to curser lst locaton
+increasing the thing causes the thing to further distance the blah blah blah
+smooth pressure
+will change out changes in pen pressure autom klsfkl r
+diff in brsu fdsize opacity along stroekk
+more gradual natural
+sclabdf distance
+corresponds to distance value listed above
+stabilizer
+----------
+shut the fucking hell up
+ajdfs brush troke ed of t g
+five prameers
+turne of f delay t osee difference
+sample count
+value high means more lag
+delay active means hera wlays agap between blah bah
+finish line means not nti llast cursoe locarkjl
+sats sensor
+dynamic brush tool
+------------------
+brush tsmoothing technique
+separate tool
+looking like aorbit and shit
+mass, drag
+physcdal imsulation
+heavy pendulum
+focus
+heavy mass mbwa nsdf slow
+
+Drawing a Sketch
+================
+Document used is at full HD size (1920, 1080).
+Larger dimensions can be used if desired.
+- But as one progresses, the pixel settings may need to be adjusted to accommodate for the extra size. 
+Using white for the illustration will lead one to choose colors that are too bright for the illustration.
+> Use \<Shift-Backspace\> to fill a layer.
+Use a separate layer for the sketch; rename it to `sketch`.
+Sketch
+------
+Select **Pencil-4-Soft** Brush Preset (resembles a mechanical pencil)
+For the sketch, avoid using black as the fg-color.
+It will be hard to tell if the sketch lines are also in black.
+Try to make the axe have four different elements:
+- A metal element
+- A wooden element
+- A cloth or fabric element
+- A gemstone or crystal-like element
+*Instructor took fewer than six minutes to sketch.*
+After basic shape of head and handle is complete, zoom in and add details.
+- Bandages atop and below the axe-head, along the axe-head.
+- Decide which parts of the fabric are on top, and which are under.
+- Put in the sharp part (i.e. edge) of the axe-head.
+- Put a gemstone in the axe-head.
+- Surround it with carvings related to natural elements.
+*Instructor used no references.*
+For real projects, one should research first and use _reference images_.
+
+Brush Smoothing
+===============
+Sometimes, we must draw smooth lines or outlines when making line-art.
+This is known also as 'inking'.
+Krita has Freebrush Tool Options to aid with inking.
+- basic
+- weighted
+- stabilizer
+Krita also has specialized Tools to aid with inking.
+- Dynamic-Brush Tool
+- Assistant Tool
+- vector tools
+Basic Brush Smoothing
+---------------------
+Activate Freehand Brush tool.
+In the Tool Options docker, there will be a dropdown for `Brush Smoothing`.
+This feature should always be turned off (i.e. set to 'None') whenever you're not inking or making line-art.
+The most basic type of brush-smoothing is the 'basic' mode.
+This mode is designed for budget drawing tablets.
+If there is no difference, then the drawing tablet's already got a basic brush smoothing feature.
+Weighted Brush Smoothing
+------------------------
+Provides stronger effect than that of Basic Brush Smoothing
+Many parameters are provided:
+### Distance
+Sets how far brush tip is from actual mouse position.
+Is measured in number of 'events', as defined by Krita.
+### Stroke Ending
+Determines how aggressively a line is drawn to the cursor's last position.
+If the value is higher, then the stroke will be farther from the cursor's last position.
+Ideal to set to 0.5 for all occasions, per instructor's advice.
+### Smooth Pressure
+Instructor's recommendation to have this enabled always.
+This evens out the changes in pen pressure as you stroke automatically.
+Difference in brush stroke and opacity will be more gradual, and look more natural.
+### Scalable Distance
+Corresponds to `Distance` value above.
+Makes `Distance` value takes into account current zoom-value.
+Instructor's recommendation: Have this on
+Stabilizer
+----------
+Brush stroke can be adjusted to end up at cursor position.
+### Sample Count
+Works similarly to `Distance` in weighted brush mode.
+If the value is low, the brush strokes will be closer to the cursor.
+If the value is high...
+No matter how much the brush stroke lags, the brush strokes will eventually follow and end in cursor location, provided that delay option is on.
+### Delay
+The value determines distance from cursor to brush stroke.
+### Finish line
+Similar to stroke ending found in weighted mode.
+Turning this off will make it so that the brush-stroke will terminate at the last cursor location.
+### Stabilize
+Same as in weighted mode
+Dynamic Brush Tool
+------------------
+This is a tool for smooth line artworks.
+Click on icon that looks like part of ellipse with one of its foci.
+Functions in accordance with following physics analogy:
+> Pulling on a pendulum with a bit of string or rubber
+### Mass
+Determines the weight of the pendulum being pulled
+The heavier it is, the more slowly it will move.
+Recommended value: 0.02
+### Drag
+Determines how elastic the string or rubber is.
+The smaller this is, the faster the pendulum will move.
+
+Assistant Tool Basics
+=====================
+A collection of the different type of rulers we find in the real world.
+Icon looks like crosshairs.
+After that, the user must select the desired assistant to create.
+Choose via the Tool Options docker.
+To hide assistants:
+1. View
+1. Show Painting Assistants
+Ruler
+-----
+Used in order to make straight lines.
+Click to define one point, then click again to define the second.
+Snap to Assistants while freebrushing.
+Infinite Ruler
+--------------
+Similar to regular ruler
+Difference is that when using the freebrush tool, the line is going to be extended infinitely.
+Parallel Ruler
+--------------
+Limit to assistant
+When using `Snap to Assistants`, all other assistants are ignored.
+
+Advanced Assistant Tool
+=======================
+Three types.
+1. Perspective
+1. Circle
+1. Spline
+Perspective effects. Three assistants can help with this:
+- Two-point perspective
+- Perspective
+- Vanishing point
+Vanishing Point
+---------------
+(skipped)
+Perspective
+-----------
+Must define four points that make up the perspective plane
+Two-point perspective
+---------------------
+This type supports the 'Limit assistant to area' option.
+To create:
+1. Click thrice on the canvas
+1. Select two points to determine vanishing point / horizontal line.
+1. Select the last point: this will determine the center line.
+1. To make the second point(?) perfectly straight, hold \<Shift\>.
+1. Lastly determine where the center line is.
+Once done, one can adjust the shape of the assistant by playing with the vertices.
+Dragging the horizon point will create a new assistant; it's really psychedelic.
+With the freebrush tool one can create straight vertical lines with great ease.
+One can draw lines that lead to the first vanishing point, and lines that lead to the second.
+Ellipse / Concentric Ellipse
+----------------------------
+These help you draw ellipses or circles.
+1. Click thrice on the canvas.
+1. Define the base diameter by clicking once, then again.
+1. Define the second diameter by clicking once more.
+*For a perfect circle, hold \<Shift\> while selecting point three.*
+What if one needs to draw multiple circles centered on a single point?
+> Use Concentric Ellipse Tool! It is identical to the method for the Ellipse Tool. The difference: when you use the brush tool, one can draw multiple circles around the same point provided you do it in one brush stroke.
+Spline
+------
+The one that's most often relied on, the instructor purports.
+Useful for drawing curves.
+Must define four points first.
+1. First two points specify end-points of curve.
+1. Third and fourth points control the curvature. Same as how Bezier handles work in other graphics programs.
+Note: Spline can function as a way to practice vector editing.
+If the vertices are blocked out by the box, remember the control boxes are zoom-independent.
+- i.e. zooming in and out will not change their size, and thus the vertices can be retrieved.
+Color and External File
+-----------------------
+The default color of assistants is light grey.
+This can be problematic if background is light grey also.
+Choose a color via:
+1. 'Tool Options'
+1. 'Global Color'
+Opacity can be changed also with the progress-bar widget.
+Note: Assistants are not bound to a specific layer.
+How to save the assistants data into an external file: Press the floppy-disk button.
+How to load assistants data: via the manila-folder button (for importing)
+
+Drawing the Outline
+===================
+Previously we have made the sketch.
+After learning about brush smoothing and assistant tools, we can now ink properly.
+The Handle
+----------
+Create a new layer; call it 'outline'.
+Use `Basic-5-Size` brush preset that was put on Pop-up Palette.
+Default brush size is larger compared to sketch lines.
+One can reduce size of brush via slider above.
+One can also hold down \<Shift\> and click-drag to left or right.
+Make brush size at least two to three times as large as sketch lines.
+15px suffices for instructor.
+Set 'brush smoothing' to 'weighted'.
+Set 'distance' to 75.
+Set 'stroke ending' to 0.50.
+Smooth pressure and scalable distance are on.
+Use black for foreground color.
+Follow previous sketch and trace over.
+Start from the top of the pole and continue down to below the axe-head.
+Continue down the length of the pole.
+Hide the sketch part, then inspect the outline.
+Inspect for any holes, then patch as necessary.
+The Axe-Head
+------------
+Should use 'Assistant' and 'Mirror' tools
+Brush strokes must be mirrored vertically (i.e. around an x-axis).
+Activate 'Mirror Tool', then set the axis of reflection s.t. it is perpendicular to the pole and intersects the jewel part also.
+For the curved lines, use the `Spline Assistant` Tool.
+First, note the assistant color and bg-color are too similar.
+Change assistant color to something like 'red'.
+Reduce the opacity also, for subtelty.
+Create curved line on top.
+Select end-points.
+Determine control points for curvature.
+If still this does not prove sufficient, create more instances of the `Spline Assistant`.
+e.g. along inner curve of axe edge, along outer curve, and the back of it also.
+Press \<B\> to activate the freebrush tool.
+Set 'Snap to Assistants' option.
+- Use alongside 'brush smoothing' option also.
+- Must snap to multiple assistants at once.
+- Turn off 'snap single'.
+Draw lines along assistants in-place.
+Don't fret if the brushstroke jumps; we can zoom in and fix it later.
+Review lines again and repair them as needed.
+To this end one may need to switch off the 'snap to assistants' option and then hide all assistants.
+Evaluate work thus far.
+Mend anything that ought to be mended.
+e.g. Erase any mis-stroked ink.
+One does not need assistants for the carvings; just trace along the existing sketch.
+Note: Mirror-mode must still be in effect.
+Draw circles in the middle for the gemstone, and for the surrounding carvings also.
+Show all assistants again.
+Delete all existing assistants.
+Concentric ellipse assistant time!
+Hold \<Shift\> for a perfect circle.
+Assistant must be centered on mirror-line.
+Lines can be smoothed out also.
+Any strokes can be erased also.
+e.g. Finalizing here.
+
+Basic Coloring Techniques
+=========================
+Coloring methods include:
+Basic
+-----
+Manual Brush Strokes
+Fill Tool
+Shapes Fill (Brush Preset)
+Polygon (Tool)
+Advanced
+--------
+Contiguous Selection (Tool)
+Polygon Selection (Tool)
+Freehand Selection (Tool)
+Colorize Mask (most advanced)
+Starting
+--------
+Must create non-destructive workflow.
+Want colors on separate layer.
+Colors can't mix in with either outline or sketch.
+Create new paint-layer beneath outline; rename to 'color'.
+### Manual Brush Stroke
+Use regular brush tool.
+Use brush preset with hard border (e.g. Basic-5-Size)
+Choose wood color.
+Adjust brush size by holding down \<Shift\> and click-drag to left to make it smaller.
+Use no 'brush smoothing' this time.
+Draw directly on canvas to add wood color to correct area.
+Activate eraser-mode to remove excess strokes, then erase areas that were colored by mistake.
+Set brush size to be smaller for a smaller area.
+This method requires much hard work and is error-prone also.
+### Fill Tool
+Choose the icon that resembles a paint-bucket.
+Layer with line artwork must be selected.
+Drawbacks:
+- area must be either closed or already filled for it to work
+- this method is **destructive**; it will break the existing pixels
+- doesn't look good on semitransparent outlines or color areas.
+Note: Semi-transparent pixels aren't completely filled in.
+To circumvent this:
+1. Keep using 'color' layer below.
+1. `Tool Options`
+1. `Sample`
+1. `All Layers`
+Note: Krita considers outline layer as though it exists in same layer as color layer
+To cover more semi-transparent pixels, increase 'threshold' value
+- This will cause Krita to be more tolerant of differences in the color of its target.
+Recommended: ~32
+One can also force the resulting color area to be wider or narrower.
+Use negative value to shrink the resulting area also.
+'Feathering radius' parameter is useful to make borders of color area degraded towards transparent.
+e.g. Setting the parameter to 10px and clicking on the canvas will make it look like someone used a can of spray-paint.
+### Shapes Fill brush preset
+The icon looks like a chemical flask.
+Click-drag on canvas to define closed area.
+Similar to usage of freehand selection tool.
+Area will be filled with foreground color.
+Note: This preset has an eraser-mode, like all the others
+### Polygon Tool
+Similar to `Shapes Fill`
+Check notes: This was covered already.
+Change 'fill' parameter to 'foreground color'
+Set 'outline' to 'None'.
+Click and release to define the area to be filled.
+Terminate selection either by selecting start-point, double-clicking, or holding down \<Shift\> then clicking.
+
+TODO: Refine and revise
+
+Coloring with Selection
+=======================
+Now we discuss these lot:
+Advanced
+--------
+Contiguous Selection (Tool)
+Polygon Selection (Tool)
+Freehand Selection (Tool)
+~~Colorize Mask (most advanced)~~
+The most basic technique entails creating a selection then filling it with color.
+Polygon Selection
+-----------------
+Select polygonal selection tool
+Make selection on canvas
+Select desired color.
+Press \<Shift-Backspace\> to fill.
+Press \<Backspace\> to fill with bakcground-color.
+Open 'Edit' menu in top menu-bar in case you forget any shortcuts.
+### The Uniqueness of the Selection Method
+We can combine it with the brush tool
+The resulting color can be varied consequently.
+Note: Not just a single uniform color as with the previous method.
+e.g.
+Create selection near bottom of pole of axe
+Right-click, then select Airbrush-Soft brush preset
+Try to make the brushes prefer a certain side.
+One can add shade or highlight to an image this way.
+One can also fill colors with a hue variation.
+e.g. Creating a flame.
+Freeform Selection Tool
+Draw a flame.
+Select yellow color.
+Shift-Backspace to fill.
+Use the Freebrush tool with the Airbrush Preset.
+Choose an orange color.
+Make brush strokes that prefer the boundaries of the flame.
+Process can be continued with red.
+Clear selection once done.
+To further refine the drawing, use the Brush Preset we've prepared before: blender-smear. ???
+Mix and push pixels around until you're happy with the result.
+Contiguous Selection Tool
+-------------------------
+Used in order to make a selection based on the existing color chosen.
+Icon looks like a sparkly wand
+Click on a point on the canvas
+Krita will analyze the color at that point, then try to select the surrounding area whose color is similar to the selected color.
+Control the level of chromatic tolerance via 'fuzziness' parameter.
+The higher the value, the more tolerant Krita will be (i.e. direct relation); and so the bigger the resulting selection will be.
+'grow/shrink selection': ...Should this not be self-explanatory? This manually resizes the currently selected area. Positive values expand, negative values do the other thing to the selection.
+'feathering' parameter... This makes the edges of the selection region more subtle / transparent.
+These options are similar to those in the fill tool
+Whereas the latter fills the thing in instantly, the continguous selection tool allows you to manually brush in the fillings.
+Drawing silhouettes can be done via this tool also.
+1. Clean the color layer by pressing the \<Del\> key.
+1. Make sure the 'contiguous selection tool' is still active.
+1. Set the fuzziness to 8.
+1. Use the 'all layers' mode, accessible via Tool Options.
+1. Must be in the outline layer for this to work.
+1. Click on empty area => whole canvas is selected save for axe.
+1. To fix selections that fall slightly outside the outline, increase the 'grow-shrink value' a bit (e.g. +2).
+1. Border of selection region is much deeper into the outline.
+1. Select 'color' layer once again.
+1. Invert the selection via ==\<Ctrl-Shift-i\>==. Select > Invert Selection.
+1. Press \<Shift-Backspace\>.
+1. Use 'alpha lock' to lock the transparency area.
+1. Use brush tool with a solid brush preset.
+1. Dope with colors as needed.
+1. Combine this technique with others as needed.
+
+Colorize Mask
+=============
+What is a 'mask'?
+A mask is additional information or a set of features that can be affixed to a layer.
+1. Select 'outline' layer.
+1. Click on small arrow icon next to plus button near button, then select the Colorize Mask from the pop-up menu. (third from bottom)
+*Now a mask appears beneath the layer it's attached to, sort of like the latter's a group layer. On its own, it cannot exist.*
+1. Create colorize mask also by right-clicking...
+1. The icons on the right are different from icons on a regular layer.
+One can also add in a colorize mask via the tool itself. (colorize mask editing tool)
+click on layer that hasn't got a colorize mask yet.
+krita will add the thing to that layer automatically.
+If you're on a colorize mask or a layer with a colorize mask already, the button will have no effect.
+This mode makes the ink look blurry.
+To exit / enter the edit-mode: check 'edit key strokes' in the Tool Options.
+Alternatively press the pencil icon in the colorize mask in the layers docker.
+Basic technique
+---------------
+Colorize mask works similar to the fill tool
+must be applied to an outline image.
+All color areas should be enclosed without leaks.
+Differentiating color mask from the fill tool is that it uses a more advanced algorithm to detect outlines
+As a result the result is very clean
+Another difference is that the colorize mask is non-destructive
+The color can always be revised as needed
+Before you start coloring with a 'colorize mask', use a solid bruhs preset and in normal condition ; not eraser mode.
+Colorize mask will use the brush tool and its settings to register the colors.
+Make sure the 'colorize mask editing tool' is active
+Editing mode must be active also.
+Select color.
+Set brush size to be smaller as necesary.
+Add some strokes to desired area, uncaring for the outlines.
+This is much easier than the fill tool, where you have to click on each area one by one.
+Choose a yellow color for the fabric.
+The background should also be colored even if you plan on making it transparent later on.
+Right-most icon in layer-row of colorize mask commences colorization
+Revising the Colors
+-------------------
+Must return to 'colorize mask' editing mode.
+Add wood color for bottom bit.
+Mark it with color.
+Remove blue color and replace with purple.
+- Use eraser mode.
+- Erase strokes manually.
+Note: lower-left.
+- Here, the blue color is gone.
+To remove all brush strokes of a specific color, select color directly in palette, then select 'remove' button (lower-right)
+To replace with another color:
+- Select color
+- Reapply the stroke
+Let Krita update the colors.
+- Select 'Update' in Tool Options.
+Convert to Paint-Layer
+----------------------
+This step is naecessary to adding shading or highlighting above the bae color but still below the outline layer.
+Before conversion, if you wish to keep the original mask as a backup, duplicate the layer and mask by the usual means.
+\<Ctrl-J\> = Duplicate layer. In this case, the colorize layer.
+Right-click layer.
+Select 'Convert' > 'Convert to Paint Layer'
+Rename layer to 'Color'
+Hide the colorize mask as it's no longer needd.
+Click small arrow button on outline layer to keep things simple.
+
+Shading
+=======
+Must add darker colors to image.
+To revise any colors, recreate color with brush tool.
+Filter feature... will be discussed more in-depth in Advanced course.
+Focus only on how to darken via filter.
+Use selection tool to limit area to be affected.
+Use polygonal selection tool.
+Select area to be changed.
+Filter > Adjust > HSV Adjustment
+Select 'lightness' parameter.
+Lower value until you're satisfied with the brightness level of the color.
+Clear selection.
+Must make sure that color layer is safe from unwanted changes.
+Lock the thing in the layer docker
+To make bg look more interesting, add random brush strokes.
+Select: A bristle-brush preset
+Round value to 150px
+For uniformity, use assistants tool
+Parallel rules.
+Make it tilt
+Press B to make another parallel rule.
+Make brush strokes in uniform direction
+Do not use eraser mode.
+Use the normal brush mode to erase.
+Hold control, then click on color ti siphon.
+Draw some more brush strokes of different colors to reduce excess blue.
+Preparing the Layers
+--------------------
+Use 'delete all' to remove assistant.
+Return to brush tool by pressing B.
+Reuse paintbrush preset
+Protect bg-layer from changes via layer-lock.
+Create new layer above 'Color' layer.
+Rename layer to 'shading'
+To add shadows, use 'multiply' blending mode.
+To add highlights, use 'screen'.
+Constrain shading to just two layers
+Lock 'alpha inheritance' for 'shading' layer. (middle)
+Shading Colors
+--------------
+Begin with wooden top.
+Hold down Ctrl-key and click on wooden area to siphon color
+Press \<K\> to shift color to darker variant.
+Make brush strokes to define shadow.
+Same process for red color.
+Make sure to shade the area around the axe-head carvings also.
+Gemstone and Reflection
+-----------------------
+Shading the gem area is different from shading the rest.
+Must use smooth color transition
+Use airbrush preset, accordingly.
+Make the thing smaller via express dial on tablet
+Limit brush strokes inside circle area
+Must create skeleton first.
+Sample selection via 'all layer' option.
+A shortcut to move layer's selection
+Suppose the lading layer is already complex.
+As such  one must sample from color layer.
+Page-Up/Down to move the layer's selection up and down.
+Make sure color layer is selected.
+Use contiguous selection tool
+Click in center area of circle.
+Once we have that selection, press page-up until we're back in the shading layer.
+Press B, then hold Ctrl and click to siphon the purple oclor
+First we need a darker version of this purple color (K)
+Draw circular strokes at top, left, and right
+For bottom center, add lighter color.
+Lighten bottom area somewhat.
+Draw spiral via solid brush preset
+Add a 'specular' color layer.
+Add fake reflection on main metallic part of axe-head.
+
+Highlighting
+============
+Make the shading colors in the handle darker.
+Use filter techniques as in previous lesson.
+Use airbrush preset
+Adjust size until it's as big as the axe handle.
+Lower opacity to around 50%
+To make brush strokes darken existing colors, use multiply blending mode.
+Apply brush to only pixels on the shading layer.
+Turn on alpha lock icon. (rightmost)
+Focus on top handle first.
+Apply brush strokes.
+Extreme highlighting style
+--------------------------
+Create new paint layer.
+Enable alpha inheritance option
+Rename layer to 'highlight'
+Make selection
+Aribrush preset
+Reset blending mode to normal
+Choose color of wood; brighten it.
+Apply using 50% opacity.
+Axe head highlight colors
+-------------------------
+Sample color
+Lighten starting from center.
+Adjust brush size via keyboard
+Lighten carvings.
+### Specular effect to gemstone
+Use highlight layer
+Use solid brush preset
+Use white color.
+Draw circles on top left of gem area
+### Reflecting darker versoin of sheen
+Put in lighter brush strokes near middle.
+Backlight effect
+----------------
+Must simulate strong light source from behind object or background
+Light should shine on darkest part of axe object.
+One should use color that matches background.
+Put in brush strokes that imply light is coming from behind.
+
+Brush Presets Preparation
+=========================
+The Preparation Process
+-----------------------
+Various brush presets that will be used in the next paintin process.
+Previously learnt about managing brush presets via tags.
+Brush presets can be selected via tags.
+Tags can be activated in the PUP.
+Lower-left: Icon that looks like a tag.
+Every artist has a preference, style, and workflow.
+The instructor's way is not the only way.
+By inspecting workflow and understanding the concepts, one will gain the means to develop one own's workflow.
+Brush presets needed:
+- sketching
+- blocking
+- shading
+- smearing
+- blurring
+- detailing
+- erasing
+Need a brush for sketching:
+Generally one does so with a pencil.
+This is why the Pencil4Soft preset was invented.
+Need a brush for blocking:
+Quickly creating a solid area to add a base color or create a silhouette
+This is why the Basic4Size brush preset exists.
+Brush preset for shading and highlights:
+Essentially a brush that can genrate color gradations quickly
+Hence the Aribrush Preset
+Smearing:
+Process of pulling and mixing pixels
+Blender smear brush preset exists for this purpose.
+Blurring:
+A brush hereby one can blend colors
+This is why the blender blur exists
+Detailing:
+Usually, we want the pen pressure to control only a single aspect of the brush (eg size, opacity)
+This brush will control both the size and opacity.
+Basic5SizeOpacity exists to this end.
+One of the more challenging bits.
+This can speed up the process of detailing / fine-tuning.
+Erasing:
+Any brush preset can erase.
+But also we sometimes we need a special preset with a fixed brush size.
+Eraser circle preset exists for this purpose
+
+Custom Shortcuts
+================
+Continuing preparations.
+Focussing on creating custom shortcuts
+Basic strategy
+--------------
+Most of these tools and features have shortcuts already.
+To accelerate workflow, leverage custom shortcuts.
+Place tools and commands most frequently used as close as possible to fingers.
+Something something choose keys on left side of keyboard.
+Creating Custom Shortcuts
+-------------------------
+Use the letter Q to clear the selection, because \<Ctrl-Shift-A\> is a pain in the hassle.
+By default, the Q key is used for the multibrush tool.
+To create a custom shortcut:
+1. Settings
+1. Configure Krita
+1. Keyboard Shortcuts
+1. Search: 'Deselect'
+1. Configure 'Alternate' field.
+1. 'Custom': \<Q\>
+\<Z\>: Freehand selection tool.
+Alternatively click on 'Shortcut' field.
+Reset and Save
+--------------
+Use the damn buttons.
+
+The Basics of Shading
+=====================
+Light Direction
+---------------
+Most light sources are above our heads.
+We're used to seeing highlights in the upper area
+We're used to seeing shadows in the lower area.
+Artificial light sources are no different.
+Dark on top && light on bottom => object is a hole
+Position of highlight and shadow is critical, as it defines the orientation of the surface
+If it is aligned towards the light source, the surface will be perceived as convex.
+Conversely, the surface shall be seen as concave.
+Shadow Color Value
+------------------
+Concerning the brighntess of a color and how it implies how deep a surface is.
+Darker holes look deeper.
+In truth, though holes with lower opacities look more shallow.
+Shading Border Smoothness
+-------------------------
+Sharp versus smooth
+Sharp shadows suggest a steep change in altitude
+Smooth shadows imply a less steep change
+Shading plays a role in defining the shape of objects in an illustration
+Real world: Shape of object dettermines shape of shadow
+Painting: Craft shadow to define the shape
+Three things to note:
+- light direction => concavity
+- shadow color value => surface depth
+- shadow border movements => steepness of slope
+'Light study'
+: Painting various forms of real-world objects and their shadows.
+
+Shading Techniques
+==================
+Different methods for applying shading colors onto a base flat color.
+Three methods at our disposal
+- blurring
+- airbrush
+- tradigital
+Use paint layer separate from bg layer
+Use ellipse tool to draw circle.
+Make selection first using elliptical selection tool.
+Click-drag and hold down \<Shift\> s.t. perfect circle is formed.
+Grey must be formed.
+Choose from color palette
+\<Shift-Backspace\> to fill selection.
+Clear the selection.
+\<Ctrl-J\> to duplicate layer of paint.
+Rename all those three layers s.t. they're numerical.
+Select 01 layer, then move it.
+Hold down \<Shift\> to make sure it does not stray vertically.
+Blurring
+--------
+Refine using 'blurring' brush preset
+Must make sure color does not bleed.
+Should activate 'alpha lock' of layer
+Do same for two layers above.
+Currently using Basic5Size brush preset
+Make sure base color is on.
+Press \<K\> to darken grey color.
+Shade the thing.
+Press \<K\> again to make the thing darker.
+Use brush preset called 'blender blur' to smooth out colors.
+Adjust brush size as needed.
+If the size is small, gradation area formed will be small also.
+To affect larger area, larger brush is needed.
+Pressure of pen will also affect blurring effect.
+Airbrush Method
+---------------
+Get aribrush preset
+Reduce the brush until it's almost as big as circle.
+Hold down \<Ctrl\> and choose base color
+Press \<K\> twice s.t. color becomes dark
+Use light brush strokes
+Circular motions in bottom area.
+Ensure alpha lock is active.
+Once finished, add highlight colors.
+Process is same as shading process.
+Choose base color.
+Press \<L\> twice.
+Draw brush strokes.
+Make brush strokes while gradually decreasing brush size.
+Decrease brush size by pressing open bracket key.
+Tradigital Method
+-----------------
+A lot of practice is needed for it.
+We must imitate shading process of real world paintings.
+==Tradigital method==
+: Attempts to mimic painting process in real world.
+This technique is more suitable for painterly styles and not suitable for clean styles that try to achieve smooth color gradations.
+Use brush presets that look natural or simulate real brush bristles.
+Select a brush preset with an appropriate thuimbnail
+Dry Bristles preset works
+Select base color
+\<K\> twice
+Make strokes with light pen pressure first in middle area
+As we go to border area we add more pressure to pen.
+Make pen strokes with light pen pressure first in middle area.
+As we got to border area we can add more pressure.
+For highlight, process is identical.
+Choose base color
+\<L\> twice.
+Make light strokes first.
+Closer we get to center, the more we can press the pen.
+Stage 1 Complete!
+Stage 2: refine existing strokes.
+Do NOT make colors perfectly smooth.
+Avoid using blurring brush
+Do all color blending manually.
+Look for areas where two contrasting colors meet
+Choose color in middle
+Make light strokes a few times on that area so that colors are more blended.
+Lowering opacity of brush can help get more subtle strokes.
+Repeat process until satisfaction is attained!
+In case 'blurring' is absolutely necessary:
+STILL AVOID REGULAR 'BLENDER BLUR' preset.
+Use preset called 'blender textured soft'; more natural.
+Using excessively can remove all unique brush strokes already present.
+==The 'tradigital shading method' will be discussed more in-depth in the advanced level course.==
+
+/* EXERCISE */
+
+Sketching, Base Color, and Layer Composition
+============================================
+Making a skull illustration.
+Skull has only one type of color on the surfae.
+Whereas the shape is complex
+Complekx enough to practice shading on it.
+Workflow
+--------
+Similar to how we created axe illustration
+No line art will be drawn
+We must use smooth shading techniques.
+Not just flat colors.
+We make use of blending modes also.
+### The process
+- sketching
+- add base color
+- layer composition
+- shading using:
+- - basic method
+- - advanced method with selection
+- add highlights
+- add details and textures
+### UI differences
+This was recorded in Krita4
+1. Settings
+1. Dockers
+1. Palette
+Stick to defaults
+### Sketching process
+Make paint layer above bg layer
+Brush preset is called pencil4soft
+Previously this was placed in the PUP
+No line art will be made
+Draw sketch
+Large ellipse as the back of the head.
+Kinda looks like a peach.
+Put a mask-sort of thing near the 'crack' of the peach.
+Make like four teeth
+Put in them there angry brows, my mna.
+Do not aim for realism.
+A simple drawing will suffice
+Smaller version of peach to connect mask and big peach
+Erase as necessary if it's too big.
+Darken outline of the skull.
+Rename sketch layer to 'sketch' if desired.
+Rename bottom layer to background
+Press \<Shift-Backspace\> to fill bg layer
+### Base Color
+Create new paint layer below sketch layer but above bg layer.
+Rename layer 'b' for the layer that has got the base color.
+reduce opacity of sketch to 20%
+Use freehand selection tool to add base color.
+Custom shortcut for this: \<Z\>
+Follow silhouette of skull, holding down Ctrl to create straight lines for selection shape.
+Once selection is complete, choose light-brown color.
+Fill selection via \<Shift-Backspace\>.
+Clear selection.
+BG color from earlier has a brightness / value similar to base color of skull.
+Darken bg layer by normal means.
+Lock bg layer to protect it from further changes
+### Layer composition
+Separate shading layer from base color layer.
+Create new layer above 'base color layer'
+Use alpha inheritance feature later to make alpha condition not affected by bg layer.
+Place shading and base color layer in one group
+To make new group layer, select layers, then \<Ctrl-Shift-G\>
+Right-click on base color layer.
+'Quick clipping group'
+New paint layer is created and it's got the alpha inheritance switched on already.
+Change blending mode of this layer to 'multiply' (the mask layer; rename this to 's' for shading).
+Multiply blending mode will make color below darker.
+Suitable for shading or shadow areas.
+For group layer, rename to 'skull'.
+
+Shading With Selection
+======================
+Global shading with basic technique
+-----------------------------------
+Must first determine where light source is.
+Set light source at center up above.
+Make light source slightly tilted from top right
+Use blurrind technique.
+Hold down Ctrl and pick base color
+Press Kt odarken color
+Choose solid brush preset
+Set opacity to 100
+Reduce it to 20% via \<I\>
+Put shadow over majority of skull save for up and right.
+Gradually apply shading over again until satisfied.
+Use blurring brush preset
+Make strokes to soften all contrasting lines.
+Shading with Selection
+----------------------
+Must add more etaild shading
+Use selection tool in conjunction wtih airbrush preset
+Start from right temple
+Select base to make it darker.
+Use manual method first.
+Hide shading layer.
+Ctrl+Click on base color
+Press K twice for much darker color
+Unhide shading layer again.
+Use airbrush preset.
+Lower opacity of brush to 50%
+This ensures effect of airbrush is not so strong.
+Hold down Ctrl to make it function similarly to polygonal selection tool.
+Select area.
+Shade.
+Use smearing brush to make edges seem smoother.
+Lighten some line that connects mask of skull to back.
+unhide outline.
+Outline mask around eyes.
+Shade gaps between teeth.
+Darken bits beneath teeth for texture.
+
+Highlights and Textures
+=======================
+Adding highlight colors and more details to skull illustration.
+Highlight Colors
+----------------
+Need new paint layer above shading layer.
+Activate 'alpha inheritance' option (middle on layer-row).
+This way we can draw on the layer without worrying the strokes wil bleed out from the base color area
+Unlike shading layer, for highlight layer, set blending mode to 'screen'.
+- Screen: brightens colors underneath.
+Coloring techniques similar to how we add shading colors
+Only difference is that we choose lighter not darker colors.
+For example we want to add a highlight color above the eyebrows.
+Create a selection.
+Press \<B\> for brush tool.
+Hold down Ctrl and select base color.
+Press \<L\> to lighten color.
+Brush to lighten.
+Do the same for the eyebrow on the ohter side.
+Use brush tool with airbrush preset.
+Try making center area lighter
+Repeat process of top of head.
+Use 'blurring brush' to refine color gradation.
+For sharp gradation, use 'smear' preset.
+Adding Textures
+---------------
+Many ways to add details to texture
+Simplest way: create directly on base layer.
+Choosing this approach mandates you turn on alpha lock.
+Many brush presets exist for applying texture
+Texture brushes are very conditional.
+Place texture brushes can be plcaed in PUP if desired.
+Use brush preset window to search for texture brush windows.
+Choose dark color already in image.
+Reduce brush opacity to around 30%
+Make light strokes where you wish to add texture.
+Cracks and Holes
+----------------
+Create directly on base color layer.
+Do not make opacity uniform.
+Finishing Touches
+-----------------
+???
+
+The Workflow
+============
+Creating an illustration of a clifftop tree.
+This one has one more color area.
+Workflow to make this illustration will be outlined.
+### Workflow
+- Reference images
+: Find reference images and place them on side; helps us stay focussed on what we wanna make
+- Sketching
+: Process where a pencil brush preset is used to draw out basic ideas onto canvas
+- Composition
+: Prepare composition by creating layers, masks, groups, etc. Must determine which object belongs to which composition group. (three groups: bg, midground, foreground)
+- Base coloring
+: Must choose base color palette for each of objects inside illustration.
+- Local shading
+: i.e. ambient occlusion. Use different layer above base; add subtle shadows that appear in corners, crevices, intersections, etc.
+- Global Shading
+: Put shadows emitted by one object onto the other.
+- Highlight
+: Adding lighter colors to areas that are facing the light source.
+- Details and Textures
+: Free to create new layer to add color variations, textures, scratches, bumps, etc.
+
+Using reference images
+======================
+A tool called the 'Reference Images Tool'.
+Compile images from the internet in order to help you figure out what effect you wish to achieve.
+Click on the icon that looks like a push pin
+Click on the plus in the Tool Options to add a reference image.
+The image is never distorted
+- The 'keep aspect ratio' option is always on by default
+One can also mirror these things
+One can also lower opacity
+One can lower saturation to sap color.
+Trace over reference images as desired
+1. View
+1. Show Reference Images
+Save Location:
+- Embed to .KRA
+- Link to Image
+Export reference images as .krf by clicking on floppy disk icon.
+
+Sketching
+=========
+Circular Frame
+--------------
+We want to limit the drawing to a circular area. Why?
+It takes little time to complete.
+Create a new layer for a circle
+Rename layer to 'frame'.
+Select 'elliptical selection tool'.
+Click-drag while holding shift-key to make perfect circle.
+If you reach the end of the canvas but the circle is not centered,  hold Alt and drag the thing.
+It is alright if it's not exactly at the center.
+Inner area should be void, while outer area should be filled with bg color.
+Invert selection via Ctrl-Shift-I
+Fill with dark grey
+The thing should look like a window (or you know the screen before James Bond shoots ya).
+Lock the frame layer to prevent it from being changeed.
+Must draw rough sketch on layer 2
+Use pencil brush (metallic aglet with black tip)
+Use blue for rough sketch (light-blue, lt sky blue)
+Draw the tree
+Draw top side of grassy cliff, per reference pictures.
+Draw rocky side of cliff (reference picture is beneath it)
+Final sketch
+------------
+Create paint layer above previous
+Draw tidier sketch with black color.
+Press D on keyboard.
+Trace and perfect previous sketch (think of it as a rough draft)
+Rename to 'sketch final'
+Rename other to 'sketch rough'
+
+Layer Composition and Base Colors
+=================================
+Sort layers and add base colors to tree illustration
+Divide illustration into several main groups
+First: background (the sky)
+Midground: trees and hills
+Foreground: Make no group for this yet.
+Change name to 'mg'.
+Rename background to 'bg'.
+Move layer1 into bg group layer.
+rename layer1 to 'b'
+focus on midground group layer.
+Make each area of base color a separate group layer.
+cliff is its own subroup
+so is grass
+tree trunks and branches are also subgroups
+leaves are yet another subgroup.
+This will make it so that there are too many layers to manage apparently
+Other solutions are available.
+Make everything in one layer.
+Split base colors into two subgroup layers
+One for grass and leaves
+Other for tree trunks and rocky cliff.
+These are non-contiguous.
+We use multiple groups for base colors to avoid areas of different colors being directly in contact.
+Midground should have 2 subgroups
+Use arrow buttons to shift group layers up a level
+Name one subgroup grass and leaves.
+Make another group: tree trunk and cliff
+Base Coloring
+-------------
+Add paint layer inside group layers.
+Select grass and leaves
+Make new paint layer inside it.
+Freeform select grass; okay to cross over tree trunk and cliff 
+Better to choose base that isn't too close to black or white or whose saturation is too strong
+Useful when later we must perform Color Correction
+When brush tool is in eraser state, using 'Fill Color' command will delete pixels.
+Now add colors for bark and cliff
+Adding Sky Color
+----------------
+Choose cyan or light-blue; must be bright
+Choose airbrush preset
+Make brush size bigger
+Draw brush strokes in top half of bg
+Choose next a darker color.
+Make some strokes in the bottom area.
+
+Local Shading
+=============
+Hide reference images:
+1. View
+1. Show Reference Images
+Ambient Occlusion
+-----------------
+i.e. local shading
+A type of shadow that is very subtle
+Seen in crevasses, cracks, corners, areas where objects intersect.
+Result of ambient light being blocked.
+Ambient light
+: environmental lighting in which comes from all directions with uniform strength.
+We're focussing only on one base color area at a time.
+Add layer for 'local shading'; rename to 'L'.
+Enable alpha inheritance s.t. color does not bleed outside base color.
+Activate selection
+Create shadow.
+Press \<D\> to use the black color.
+Brush
+Use smear brush preset to smooth out shadows and base
+Use blur brush.
+
+Global Shading
+==============
+Term for shadows with these characteristics:
+1. Large size
+1. Shadows of objects that fall on other objects.
+One can create on local shading layer.
+If the shading layer is complex as-is, create separate layer for global shading.
+Rename such a layer to 's' above the local-shading layer
+No need for freeform selection this time.
+Emitted shadows
+---------------
+Can also create dedicated layer for this
+Instructor uses existing 's' layer
+Draw shadow over the tree to represent the copse's.
+Refine via smear or blush preset
+Make shadows on grass via freeform selection tool and usual shift-backspace
+
+Details and Textures
+====================
+Add highlights on glossy surfaces
+e.g. wet, oily, metal, glass
+Should create highlight layer above 's' layer and name it 'h'
+For highlights, use 'screen' not 'multiply' blending mode.
+Use airbrush preset.
+Details
+-------
+Leaving 'blending mode' at normal.
+Textures
+--------
+
+Workflow Flexibility
+====================
+To make winter version of color.
+Replace background with wintry color.
+Preserve alpha condition by locking base color layer.
+Apply brush as desired
+Fill tool is also constrained by alpha lock.
+Backlights
+----------
+Additional lights intentionally placed on dark areas serving to emphasize silhouette of main objects.
+Rim Lights
+----------
+Fake lighting effects placed on border of object's silhouette, to emphasize shape of object or to gain attention.
+Adding too many rim lights can cause the drawing to look unrealistic
+Treat it like purple prose --- if you were a normal writer. >\_>
+Put it on its own layer, above 'shading' as 'v'.
+Overlaying Sketch
+-----------------
+Adjust opacity of sketch as desired.
+Instructor's preference: 50%
+
+About 30% of Krita has been covered.
