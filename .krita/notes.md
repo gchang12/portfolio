@@ -204,7 +204,7 @@ Append 'Drag' to each of these:
 - Middle-Button: Translate
 - Shift + Middle-Button: Rotate
 - Space + Shift + Press: Rotate
-- Ctrl + Shift: Zoom
+- Ctrl + Space: Zoom
 Num:
 - 1: Reset rotation to 100%
 - 2: Zoom s.t. whole image is visible
@@ -238,3 +238,77 @@ Manage Tags
 -----------
 1. Open Brush-Preset Selection menu.
 1. Drop-down second from the left.
+
+Color Shortcuts
+===============
+X: Transpose foreground and background colors
+K: Darken current color
+L: Lighten current color
+P: Activate color sampler
+Brightness-Toggle Intervals
+---------------------------
+1. Settings
+1. Configure Krita
+1. Color Selector Settings
+1. Docker
+1. Color Hotkeys
+
+Color Controls
+==============
+
+Color palette
+-------------
+Where one stores and organizes color
+A more permanent repo for colors
+One can make groups within the Palette
+Resource folder containing color palettes and the like are at:
+~~`\~/.local/share/krita/`~~
+~~`~/.var/app/org.kde.krita/data/krita/`~~
+Access this via:
+1. Settings
+1. Manage Resources
+1. Open Resource Folder
+
+History and list
+----------------
+Temporary repos for color
+Each square representing a color is called a *swatch*
+
+Paint Tools
+===========
+
+Line Tool
+---------
+V: Open while in freebrush mode
+Drag-Alt: Move line about
+
+Rectangle / Ellipse Tool
+------------------------
+Making a perfect square / circle:
+- Hold Shift while dragging.
+- Set 'ratio' parameter in Tool Options to 1.00, then lock it.
+Drag-Alt: Move shape elsewhere
+Drag-Ctrl: Fix center of shape
+
+Polygon / Polyline Tool
+------------------------
+Exit polygon / polyline creation via one of two methods:
+- Shift-Press
+- Enter
+
+Mirror
+======
+Located on upper-right of Toolbar
+Resembles paper airplanes
+Allows one to create additional strokes when you draw.
+Generally reflects user's strokes across a set of axes
+
+Multibrush
+==========
+Change number of brushes via:
+1. Tool Options
+1. Brushes: #
+Change type of reflection via:
+1. Tool Options
+1. Type: Symmetry
+NOTE: Change reflection type to 'Translate' to draw grass easily
