@@ -5,6 +5,7 @@
   <meta charset="UTF-8" >
   <title>Web Development Notes</title>
   <link rel="stylesheet" type="text/css" href="./styles/stylesheet.css" >
+  <script type="text/javascript" src="https://livejs.com/live.js"></script>
 </head>
 <body>
 
@@ -415,252 +416,204 @@
 </body>
 </html>
 
-<!-- TODO: Convert to HTML -->
-
-<!--
-  Two new media elements in HTML5:
-  - video
-  - audio
-  Attributes
-  - width,height: Self-explanatory, hopefully
-  - controls: Hide or show multimedia controls.
-  - poster: Allows user to use an image as a still when the video isn't playing.
-  - autoplay: Determines if the video is automatically played upon successful load.
-  - preload: auto,none,metadata.
-  - loop: Declare that the video will loop.
-  - muted: Declare that the video will play without sound.
-  Other elements
-  - source: Declare source-stack
-  - track: Assists with closed captioning
-    - kind: Declare what the track element is being used for.
- -->
-
-<!-- 
-  Grid
-  - A means of dividing horizontal and vertical space on a webpage into consistent units.
-  - Similar to dividing content via <table>
-  - Standard for print layouts.
-  Rules of the Grid
-  - All content goes within columns.
-  - Only columns may be immediate children of rows.
-  - Each row's column-count must be equal to either twelve or the grid's specified maximum. Declaring more columns will cause the columns to stack.
-  - Columns may contain rows, which contain more columns, which are known as "nested columns"
-  Look into: "clear-fix"
-  Open Source code
-  - Someone else does the coding
-  - Generally follows industry standards
-  - May not be maintained
-  - May be abstruse
-  - May not be compatible with your project.
-  CSS Grids
-  - are relatively new, but are foreseen to become a new standard.
-  - enables quick and easy layout of page elements.
-  - enables layout in consistently-spaced columns and rows.
-  - float and position attributes have no effect on elements within this layout.
- -->
-
-<!--
-  Javascript can change a webpage by accessing the DOM
-  Learning the DOM will make learning Javascript easier to learn.
-  DOM = Document Object Model
-  Representation of a webpage that is computed by the browser
-  It can be interfaced with.
-  Browser computes the DOM from the HTML and JS that it receives for a page.
-  Represents HTML elements as nodes in a tree-like structure
-  Node != HTML element, but they can be thought of as such (ideally)
-  If you create a webpage via HTML only, then the DOM will be equivalent to the HTML
-  The browser dev-console shows what the DOM looks like
-  Why DOM and HTML may differ.
-  - There were errors in the HTML.
-  - Javascript may dynamically change the HTML.
-  - a server-side language may have changed the HTML
-  DOM
-  - a structured set of interfaces for programming languages to interact with it
-  - a set of specs made by the W3C that serve as guidelines for how browsers should behave.
-  - browsers provide a set of standard ways for programming languages to interact with the computed DOM
-  - each browser implements parts of that spec in whatever way it wishes, but ideally and most of the time in accordance with W3C standards.
--->
-
-<!-- 
-  Accessibility
-  - making website accessible to all users.
-  - about nineteen percent of Americans have trouble using the internet
-  - it is the duty of all web developers to make their sites accessible to this demographic
-  - visual: blind, low sight, color-blind
-  - audio: deaf, hard of hearing
-  - motor function impairments
-  - socioeconomic factors also
-    - users who don't have access to internet at home
-    - users who can access the internet only in public spaces and for limited periods of time
-    - users who live in rural areas may be unable to browse normally
-    - W3C has an article on accessibility
-    - nvaccess.org: A screen reader application.
- -->
-
-<!-- 
-  A11Y = Accessibility
-  Contrast ratio should be - 4.5:1
-  Use Web AIM to make sure color contrast between text and background is at least 4.5:1
-  Ease of clickability
-  - some users may have trouble clicking on small icons
-  - solution: provide padding and margin (works on inline items!)
-  To hide items:
-  - set position=relative,directional parameters to extreme values
-  - e.g. {position: relative: left: -10000px;}
-  - set an extra ruleset for that hidden item when that item gains focus via <Tab>
-    - makes for quick and easy jumping.
-    - idea: A navigational menu for <Tab>-users.
-    - set {overflow:hidden;}, {height,width: (minuscule)}
-  Content only for screen-readers
-  - sr-only: A class introduced by Bootstrap to denote such content.
-  sr-only (CSS)
-  - position = absolute
-  - left = -10000px
-  - top = auto
-  - width, height = 1px
-  - overflow = hidden
-  sr-only (HTML)
-  - indicate if a link is opened in a new tab.
-  - this should precede a link that is opened in a new tab.
-  Tab users
-  - see attribute: "tabindex"
-  - note: Using this is almost always a bad idea; it makes navigation a pain
-  Zooming
-  - must ensure site works at 200% magnification
-  - text must either shrink or grow in accordance with screen size
-  Alt text
-  - One of the most important parts of making the Web accessible
-  - decorative elements want no alt-text (in fact, just use CSS imagery for this)
--->
-
-
- <!-- 
-   background-image
-   - useful to display part of an image differently
-   - accepts either `href` or `src` attributes
-   Other properties to style the background include:
-   -image
-   -color: Good practice to set this if the background doesn't load.
-   -repeat
-   -position
-   -size
- -->
-
- <!-- 
-   Gradients
-   - two varieties: linear and radial
-   - Linear: Goes in a straight line; (linear-gradient)
-   - Radial: originates from some center and spreads outwards
-   linear-gradient
-   - direction, start-color, end-color
-   - direction, start-color, end-color, transition-percentage
-   * direction: Can be angle or keyword
-   radial-gradient
-   - start-color, end-color
-   - start-color, end-color, transition-percentage
-   - gradient-shape, start-color, end-color, transition-percentage
- -->
-
- <!-- 
-   Responsive images
-   - make images responsive when resizing viewport
-   - use width property and media queries
-   - use srcset/sizes attributes to load depending on viewport size
-   Have image fill entire screen regardless of viewport size
-   - width: 100%
-   - height: auto
-   - if the image is inside a container, the image will fill the container as the container is resized
-   Have images behave differently at different sizes (don't want image to fill screen after width=600px)
-   - @media (min-width: 600px) {width: 600px;}
-   srcset/sizes properties
-   - allows us to define multiple image sizes inside browser
-   - use media queries to allow browser to decide which images to serve. ideal when we don't want phones to download too big of an image
-   - https://via.placeholder.com/300
-   <img>
-   - srcset="src1 size1, src2 size2"
-   - sizes="(condition1) size1-if-condition1, ..., [fallback]"
-   Browser caches images, so steps must be taken before previewing a website whose image configurations have changed.
-   - Head on over to the developer console.
-   - Check the 'Disable cache'
-   - Inspect 'Img' tab in the dev-console
- -->
-
-<!-- 
- Media queries
- - essential part of responsive design
- - JS conditionals for CSS
- - allow developers to style based on viewport width, device orientation, and other media attributes
- - @media screen and (max-width: [dimension]) {}
- - @media print ...
- - Omit elements by setting `display: none;`
- - Most responsive design uses media queries to resize and hide elements
--->
-
-<!-- 
-  Media queries 2
-  Media types, features, and logical operators
-  - media query anatomy: '@media', media-type, media-feature (e.g. width)
-  - Combine media features with commas
-  Common breakpoints:
-  - extra-small devices: < 576px
-  - small devices: >= 576px
-  - medium devices: >= 768px
-  - large devices: >= 992px
-  - extra-large devices: >= 1200px
- -->
-
-<!-- 
+<!-- TODO: Convert to HTML
+Two new media elements in HTML5:
+- video
+- audio
+Attributes
+- width,height: Self-explanatory, hopefully
+- controls: Hide or show multimedia controls.
+- poster: Allows user to use an image as a still when the video isn't playing.
+- autoplay: Determines if the video is automatically played upon successful load.
+- preload: auto,none,metadata.
+- loop: Declare that the video will loop.
+- muted: Declare that the video will play without sound.
+Other elements
+- source: Declare source-stack
+- track: Assists with closed captioning
+  - kind: Declare what the track element is being used for.
+Grid
+- A means of dividing horizontal and vertical space on a webpage into consistent units.
+- Similar to dividing content via <table>
+- Standard for print layouts.
+Rules of the Grid
+- All content goes within columns.
+- Only columns may be immediate children of rows.
+- Each row's column-count must be equal to either twelve or the grid's specified maximum. Declaring more columns will cause the columns to stack.
+- Columns may contain rows, which contain more columns, which are known as "nested columns"
+Look into: "clear-fix"
+Open Source code
+- Someone else does the coding
+- Generally follows industry standards
+- May not be maintained
+- May be abstruse
+- May not be compatible with your project.
+CSS Grids
+- are relatively new, but are foreseen to become a new standard.
+- enables quick and easy layout of page elements.
+- enables layout in consistently-spaced columns and rows.
+- float and position attributes have no effect on elements within this layout.
+Javascript can change a webpage by accessing the DOM
+Learning the DOM will make learning Javascript easier to learn.
+DOM = Document Object Model
+Representation of a webpage that is computed by the browser
+It can be interfaced with.
+Browser computes the DOM from the HTML and JS that it receives for a page.
+Represents HTML elements as nodes in a tree-like structure
+Node != HTML element, but they can be thought of as such (ideally)
+If you create a webpage via HTML only, then the DOM will be equivalent to the HTML
+The browser dev-console shows what the DOM looks like
+Why DOM and HTML may differ.
+- There were errors in the HTML.
+- Javascript may dynamically change the HTML.
+- a server-side language may have changed the HTML
+DOM
+- a structured set of interfaces for programming languages to interact with it
+- a set of specs made by the W3C that serve as guidelines for how browsers should behave.
+- browsers provide a set of standard ways for programming languages to interact with the computed DOM
+- each browser implements parts of that spec in whatever way it wishes, but ideally and most of the time in accordance with W3C standards.
+Accessibility
+- making website accessible to all users.
+- about nineteen percent of Americans have trouble using the internet
+- it is the duty of all web developers to make their sites accessible to this demographic
+- visual: blind, low sight, color-blind
+- audio: deaf, hard of hearing
+- motor function impairments
+- socioeconomic factors also
+  - users who don't have access to internet at home
+  - users who can access the internet only in public spaces and for limited periods of time
+  - users who live in rural areas may be unable to browse normally
+  - W3C has an article on accessibility
+  - nvaccess.org: A screen reader application.
+A11Y = Accessibility
+Contrast ratio should be - 4.5:1
+Use Web AIM to make sure color contrast between text and background is at least 4.5:1
+Ease of clickability
+- some users may have trouble clicking on small icons
+- solution: provide padding and margin (works on inline items!)
+To hide items:
+- set position=relative,directional parameters to extreme values
+- e.g. {position: relative: left: -10000px;}
+- set an extra ruleset for that hidden item when that item gains focus via <Tab>
+  - makes for quick and easy jumping.
+  - idea: A navigational menu for <Tab>-users.
+  - set {overflow:hidden;}, {height,width: (minuscule)}
+Content only for screen-readers
+- sr-only: A class introduced by Bootstrap to denote such content.
+sr-only (CSS)
+- position = absolute
+- left = -10000px
+- top = auto
+- width, height = 1px
+- overflow = hidden
+sr-only (HTML)
+- indicate if a link is opened in a new tab.
+- this should precede a link that is opened in a new tab.
+Tab users
+- see attribute: "tabindex"
+- note: Using this is almost always a bad idea; it makes navigation a pain
+Zooming
+- must ensure site works at 200% magnification
+- text must either shrink or grow in accordance with screen size
+Alt text
+- One of the most important parts of making the Web accessible
+- decorative elements want no alt-text (in fact, just use CSS imagery for this)
+ background-image
+ - useful to display part of an image differently
+ - accepts either `href` or `src` attributes
+ Other properties to style the background include:
+ -image
+ -color: Good practice to set this if the background doesn't load.
+ -repeat
+ -position
+ -size
+ Gradients
+ - two varieties: linear and radial
+ - Linear: Goes in a straight line; (linear-gradient)
+ - Radial: originates from some center and spreads outwards
+ linear-gradient
+ - direction, start-color, end-color
+ - direction, start-color, end-color, transition-percentage
+ * direction: Can be angle or keyword
+ radial-gradient
+ - start-color, end-color
+ - start-color, end-color, transition-percentage
+ - gradient-shape, start-color, end-color, transition-percentage
+ Responsive images
+ - make images responsive when resizing viewport
+ - use width property and media queries
+ - use srcset/sizes attributes to load depending on viewport size
+ Have image fill entire screen regardless of viewport size
+ - width: 100%
+ - height: auto
+ - if the image is inside a container, the image will fill the container as the container is resized
+ Have images behave differently at different sizes (don't want image to fill screen after width=600px)
+ - @media (min-width: 600px) {width: 600px;}
+ srcset/sizes properties
+ - allows us to define multiple image sizes inside browser
+ - use media queries to allow browser to decide which images to serve. ideal when we don't want phones to download too big of an image
+ - https://via.placeholder.com/300
+ <img>
+ - srcset="src1 size1, src2 size2"
+ - sizes="(condition1) size1-if-condition1, ..., [fallback]"
+ Browser caches images, so steps must be taken before previewing a website whose image configurations have changed.
+ - Head on over to the developer console.
+ - Check the 'Disable cache'
+ - Inspect 'Img' tab in the dev-console
+Media queries
+- essential part of responsive design
+- JS conditionals for CSS
+- allow developers to style based on viewport width, device orientation, and other media attributes
+- @media screen and (max-width: [dimension]) {}
+- @media print ...
+- Omit elements by setting `display: none;`
+- Most responsive design uses media queries to resize and hide elements
+Media queries 2
+Media types, features, and logical operators
+- media query anatomy: '@media', media-type, media-feature (e.g. width)
+- Combine media features with commas
+Common breakpoints:
+- extra-small devices: < 576px
+- small devices: >= 576px
+- medium devices: >= 768px
+- large devices: >= 992px
+- extra-large devices: >= 1200px
 Responsive Web Design
-  Responsive web design importance and basics
-  Testing tools and methods for mobile responsiveness
-  Design strategies: graceful degradation vs. progressive enhancement
-  CSS techniques: percentages, REMs/EMs, media queries, Flexbox
-  Importance of the viewport meta tag for mobile devices
--->
-
-<!-- 
+Responsive web design importance and basics
+Testing tools and methods for mobile responsiveness
+Design strategies: graceful degradation vs. progressive enhancement
+CSS techniques: percentages, REMs/EMs, media queries, Flexbox
+Importance of the viewport meta tag for mobile devices
 Viewport
-  The viewport is the area through which users interact with web content, varying significantly across devices.
-  Designing for a range of viewport sizes is essential for responsive web design, with common categories including mobile, tablet, laptop, and desktop.
-  Developer tools in browsers, such as Chrome's DevTools, allow designers and developers to simulate different device sizes for testing purposes.
-  Extensions like Window Resizer offer quick adjustments to browser windows, emulating various device sizes for design and testing.
--->
-
-<!-- 
+The viewport is the area through which users interact with web content, varying significantly across devices.
+Designing for a range of viewport sizes is essential for responsive web design, with common categories including mobile, tablet, laptop, and desktop.
+Developer tools in browsers, such as Chrome's DevTools, allow designers and developers to simulate different device sizes for testing purposes.
+Extensions like Window Resizer offer quick adjustments to browser windows, emulating various device sizes for design and testing.
 Debugging
-  Opening Chrome DevTools (Right-click > Inspect, Command+Alt+C on macOS, Control+Shift+C on Windows/Linux)
-  Navigating the Elements tab to inspect and edit HTML
-  Using the search function within DevTools (Command+F on macOS, Control+F on Windows/Linux)
-  Editing CSS directly in the browser
-  Adding new CSS properties
-  Disabling and deleting CSS properties
-  Editing an element's HTML (Right-click > Edit as HTML)
-  Moving HTML elements via click-and-drag
-  Saving changes made in DevTools back to the original HTML and CSS files
--->
-
-<!-- 
+Opening Chrome DevTools (Right-click > Inspect, Command+Alt+C on macOS, Control+Shift+C on Windows/Linux)
+Navigating the Elements tab to inspect and edit HTML
+Using the search function within DevTools (Command+F on macOS, Control+F on Windows/Linux)
+Editing CSS directly in the browser
+Adding new CSS properties
+Disabling and deleting CSS properties
+Editing an element's HTML (Right-click > Edit as HTML)
+Moving HTML elements via click-and-drag
+Saving changes made in DevTools back to the original HTML and CSS files
 Forking and Cloning
-  Forking a GitHub repository
-  Cloning a repository to the local machine
-  Adding a git remote connection (upstream)
-  Checking remote connections with git remote -v
-  Creating and switching to new branches with git checkout
-  Adding, committing, and pushing changes to GitHub
-  Opening and merging pull requests
-  Updating local branches with changes from GitHub (pulling from origin and optionally upstream)
- -->
-
-<!-- 
+Forking a GitHub repository
+Cloning a repository to the local machine
+Adding a git remote connection (upstream)
+Checking remote connections with git remote -v
+Creating and switching to new branches with git checkout
+Adding, committing, and pushing changes to GitHub
+Opening and merging pull requests
+Updating local branches with changes from GitHub (pulling from origin and optionally upstream)
 Pull Requests
-  Forking and cloning repositories
-  Making changes and saving them in a text editor
-  Using git commands in the terminal: git clone, git add ., git status, git commit -m, and git push
-  Creating pull requests on GitHub
-  Understanding the role of pull requests in project collaboration
--->
-
-<!-- 
+Forking and cloning repositories
+Making changes and saving them in a text editor
+Using git commands in the terminal: git clone, git add ., git status, git commit -m, and git push
+Creating pull requests on GitHub
+Understanding the role of pull requests in project collaboration
 All sites are designed for a variety of screen sizes
 Designing for so many screens is now standard practice
 Responsive design matters because:
@@ -686,9 +639,6 @@ Viewport
 - don't disable user scaling
 I must remember to put this tag in.
 <meta name='viewport' content='width=device-width, initial-scale=1' >
--->
-
-<!-- 
 The Viewport
 What is a viewport?
 A rectangular area where you can see computer graphics
@@ -703,11 +653,9 @@ large: 992
 extra-large: 1200
 Let project define specs
 Recreate viewport sizes via dev-tools
-
 DevTools is a very useful tool for developers.
 One can add elements, delete elements, edit elements, and so on.
 Any changes made to the browser version of a document are not reflected in the source
-
 Procedure for forking and cloning
 Get started
 1. Fork repo to GH space
@@ -718,7 +666,6 @@ Workflow
 2. Push work on branch to fork
 3. Open pull request from assignment branch to master branch of fork
 4. After assignment is graded, merge pull request.
-
 git remote -v
 - list remote branches
 git remote add [alias] [location-of-repo]
@@ -726,14 +673,10 @@ git push [alias] [branch-name]
 - presumably push contents of [branch-name] to [alias] connection
 git pull [alias] [branch-name]
 - download contents of remote-alias to branch
-
 Pull Requests
 - a means whereby changes can be commmitted back to the original repo
 - allow code to be reviewed, commented on, then merged in.
--->
-
-
-<!-- User personas
+User personas
 constitute UX design
 help designers and developers
 represent person using a site
@@ -755,7 +698,6 @@ How to know for sure?
 Do user research for new websites.
 Use analytics for existing websites
 Research will help you determine what to develop for
-
 Tools for testing sites:
 - browser support: desktop (chrome, safari, edge)
 - mobile (safari, android!chrome)
@@ -790,7 +732,7 @@ Tools to check sites
 *TEST IN ALL MAJOR BROWSERS!*
 Chrome, Safari, Firefox, Edge
 Most common way to test: resize window
-LImitations
+Limitations
 - hard to know precise dimenionns
 - hard to test interactions
 Sequence
@@ -799,7 +741,6 @@ Sequence
 Browser extensions
 - can be helpful to autoresize window
 - use discretion about adding extensions
-
 Testing responsiveness
 - browser devtools
 - chrome: DevTools
@@ -811,7 +752,292 @@ Testing on actual devices
 - test on live site via phone
 - build private staging area
 - build local server on laptops
-  - requires python or node
-  - beware of security risks
- -->
+- requires python or node
+- beware of security risks
+-->
+
+<!--
+  Javascript is often abbreviated as `ESx` in reference to its versions
+  Serves primarily in front-end dev-work and increasingly on server-side (i.e. back-end)
+  Websites are like houses.
+  - HTML: provides structure
+  - CSS: provides decoration
+  - JS: makes everything run
+  Javascript
+  - cross-platform, object-oriented scripting language
+  - used to make web-pages interactive
+  - more advanced server-side variants exist (e.g. nodejs) 
+  All major browsers support ES5
+  Use JS via:
+  
+  - browser dev-console
+  - node
+  - online code sandboxes
+  CodePen is an online web-dev environment
+  Data Types
+  - JS allows user to create variables without declaring their types
+  - primitives include: boolean, null, number, string, symbol
+  - null: reference to invalid or nonexistent object or address
+  - undefined: no defined value
+  - symbols: allows for unique identifier; relatively new
+  Variables 1
+  - abstain from using `var`
+  - names should be semantic wrt purpose of variable
+  console.log
+  - prints value of some variable
+  clear
+  - clear console
+  strings are best declared via single quotation marks
+  strings can be concatenated via plus-sign
+  Variables 2
+  - strings can contain anything, even numbers
+  - sum of numeric string and number is sum of numeric string and number after conversion to string
+  - product of numeric string and number is product of numeric string converted to number and that number
+  - =: assigns values to variables
+  - ==: tests for equality of values
+  - ===: tests for equality of values and types
+https://canvas.uw.edu/courses/1779530/pages/lesson-03c-flow-control-and-loops-3?module_item_id=23014897
+  Control Flow
+  - to control the flow of a program based on conditions
+  - not advised to use more than two to three if-else statements
+  - if more than that many are needed, use a switch statement
+  Loops
+  - for repeating the same task over again
+  - for (counter; check counter; modify counter)
+  - condition is checked at beginning of when an iteration would be run
+  - do-while useful for login prompts
+-->
+
+<!--
+  Web Forms
+  basic example: label, input, submit-button
+  action="place to send data to"
+  place handles sent data and does stuff with it
+  HTTP
+  HyperText Transfer Protocol
+  Set of rules that govern how data is commuicated across the WWW
+  messages sent on internet are called 'requests' and 'responses'
+  Forms send either GET or POST requests (for info)
+  method={POST,GET,...}
+  Search forms usually send GET 
+  POST requests are meant to send data that alters data on the server side
+  Build forms with neither action nor method attributes
+  Handling forms via JS will be covered elsewhere
+  default upon submit: Page refreshes, form values appended to URL
+  choice of method relates to security
+
+  HTML Web Forms
+  doctype
+  html tag
+  head
+  meta-char encoding
+  title
+  body
+  input
+  - name: how the data will be labelled when handled on server-side
+  label
+  - can wrap about the input field
+  - for: must match the `id` of the input-field to which it is related
+  button or input-submit
+
+  Styling Forms
+  accessibility and functionality are of utmost priority
+  be aware of browser compatibility issues
+  font-family: inherit
+  font-size 100%
+  box-sizing: border-box
+  some inputs are inline, some are block
+  width: 100%
+  styles can be added also with pseudoclass selectors
+  valid, invalid, enabled, disabled, checked, required, optional, focus
+  a form element is focussed upon click or <Tab>
+  outline: none
+  border-radius: (dimension of length)
+  > to make things less cornered
+  add line breaks and spacing for aesthetics
+  transform into block elements via display property
+  button, input, select, textarea {
+    font-family: inehrit; font-size: 100%; box-sizing: border-box;
+  }
+  add margin for spacing
+-->
+
+<!--
+Arrays
+- list of data
+- can include integers, strings, and other arrays
+push for adding elements to the end of an array
+pop for removing the last element from an array
+splice for removing elements from a specified index
+join for converting an array into a string with a specified delimiter
+split for converting a string into an array based on a separator
+sort for sorting elements in an array (with a note on its limitations)
+forEach for executing a function on each element of an array
+-->
+
+<!--
+Do not style textarea elements via CSS; style in HTML via cols attribute
+-->
+
+
+<!--
+Event handlers
+ways for users to interact with elements on websites
+e.g. clickevents, keyup, keydown, scroll, submit
+to use event handler, paste into html element as attribute
+click handler
+- onclick method
+onload, onunload
+when user enters and exits site respectively
+onmouse[over,out]: when user moves cursor over element
+-->
+
+<!--
+getElementById
+getElementByTagName
+getElementByClassName
+querySelector
+querySelectorAll
+innerHTML
+textContent
+classList
+getAttribute
+setAttribute
+createElement
+appendChild
+insertBefore
+replaceChild
+removeChild
+-->
+
+<!--
+forEach: Iterates over array elements, executing a function for each one.
+map: Transforms each element of an array according to a specified function, returning a new array.
+filter: Selects elements from an array that meet a particular condition, returning a new filtered array.
+reduce: Accumulates a single value from an array, such as the sum of its elements.
+includes: Checks if a string contains a specified substring, returning a boolean value.
+every for checking if all elements meet a condition.
+some for determining if any elements satisfy a condition.
+find for locating the first element that meets a criterion.
+Template literals for easier string interpolation.
+Arrow functions for a concise function syntax.
+-->
+
+
+<!--
+Creating and styling HTML forms with inputs and submit buttons
+Adding IDs and classes for JavaScript and CSS selection
+Utilizing querySelector, getElementById, and querySelectorAll for DOM manipulation
+Adding event listeners for form submission
+Preventing default form submission behavior with event.preventDefault
+Capturing user input using .value
+Outputting data to the page using .innerHTML
+Data type transformation with parseInt
+Validating data with isNaN
+Creating and appending document nodes (createElement, createTextNode, appendChild)
+Conditional styling with CSS classes applied through JavaScript
+Using this in event handlers to refer to the event's target element
+-->
+
+    <!--
+    Basic CSS selectors: element, class (.), and ID (#)
+    Attribute selectors: [attribute], [attribute="value"], [attribute*="value"]
+    Pseudo-classes and pseudo-elements: :first-child, :hover, :checked, ::first-letter, ::before
+    Specificity hierarchy: inline styles > IDs > classes > elements
+    The !important rule and its discouraged use
+    The box model: comprising padding, border, width, and height
+    box-sizing: border-box: to include padding and border in an element's total width and height
+    Legacy layout techniques: floats
+    Modern layout techniques: Flexbox and CSS Grid
+    -->
+
+<!--
+Introduction to Node.js and its purpose beyond the browser
+Using NPM to manage project dependencies
+Checking Node version with node -v
+Installing or updating Node from nodejs.org based on version compatibility
+Initializing a project with npm init and understanding package.json
+Adding dependencies with npm install [package-name]
+Overview of package-lock.json and node_modules
+Introduction to Gulp for task automation
+Setting up a Gulp project and understanding gulpfile.js
+Using npx to run local versions of packages, such as Gulp
+Managing packages and avoiding global installation conflicts with npx
+-->
+
+
+
+<!--
+CSS Preprocessor: Introduction to preprocessors and their role in modern web development.
+Sass: Overview of Sass as a preprocessor for CSS.
+Variables: Using $ for declaring variables.
+Nesting Selectors: Keeping specificity low with semantic relationships.
+Partials: Organizing CSS into smaller files with @import for compilation.
+Functions and Mixins: Reusable blocks of code for dynamic CSS.
+Color Functions: Programmatically adjust colors with built-in Sass functions like darken, lighten, saturate.
+Compilation with Gulp: Using gulp to compile Sass into CSS.
+.scss vs .sass Syntax: Focusing on the standard .scss syntax.
+-->
+
+
+
+
+    <!--
+    Sass Conversion: Converting CSS to Sass for more efficient styling.
+    Environment Setup: Cloning repositories, verifying Node.js and gulp installations, and running npm install.
+    Variables: Defining and using Sass variables for colors, font stacks, etc.
+    Nesting: Simplifying CSS structure by nesting selectors in Sass.
+    DRY Principle: Avoiding repetition by using variables for commonly used values.
+    Gulp: Using gulp to compile Sass into CSS and launch a local server.
+    Refactoring CSS: Improving CSS readability and maintainability with Sass features.
+    -->
+
+
+<!--
+JavaScript Objects: Understanding that arrays, functions, and objects are fundamentally objects in JavaScript.
+Prototypal Inheritance: Objects inherit properties and methods from a prototype through the prototype chain.
+Creating Objects: Using variable assignment, Object.create, and constructor functions.
+Accessing Properties: Dot notation and bracket notation for property access.
+Setting Properties: Using equals operator to set or update object properties.
+Object Methods: Defining and accessing methods within objects, using traditional or shorthand syntax.
+Practice with Objects: Encouraging practical application of object manipulation in JavaScript.
+-->
+
+
+
+    <!--
+    Constructor Functions: Using functions with the new keyword to create multiple instances of objects.
+    ES6 Class Syntax: A modern, cleaner syntax for defining objects and their prototype methods.
+    this Keyword: Refers to the new object being created in both constructor functions and classes.
+    Instantiation: Creating new instances of objects with specific properties using the new keyword.
+    Prototype Chain: Sharing functionality across instances for efficient memory management.
+    Object-oriented Programming: Leveraging classes and objects to organize and structure code in a more modular and reusable way.
+    -->
+
+
+
+<!--
+ES6 Syntax: Introduction to the latest version of JavaScript.
+Constructor Function: Utilizing ES6 class syntax to create a constructor.
+Properties: Defining properties such as name, age, breed, color, bark level, and energy level within the dog class.
+Data Types: Ensuring properties have the correct data type (strings for name, breed, color; numbers for levels).
+Methods: Creation of the pat method to modify the dog's energy and bark levels.
+Instance Creation: Demonstrating how to instantiate a new dog object.
+String Interpolation: Using ES6 template literals to log out the dog's details.
+Object-Oriented Programming (OOP): An introduction to OOP principles using JavaScript classes.
+Console Logging: Displaying output to the console for debugging and verification purposes.
+Increment and Decrement Operators: Using ++ and -- to adjust the dog's energy and bark levels.
+-->
+
+
+<!--
+JSON as a data format distinct from JavaScript objects
+Parsing JSON with JSON.parse and converting objects to JSON with JSON.stringify
+Accessing and setting values within parsed JSON objects
+Utilizing Object.keys and for...in loops with JSON data
+Dynamically generating and inserting HTML using data from JSON objects
+JavaScript array methods, particularly forEach, for iterating over data
+Modern JavaScript syntax for string interpolation with template literals
+Manipulating the DOM with methods like document.querySelector and Node.appendChild to display generated content
+-->
 
